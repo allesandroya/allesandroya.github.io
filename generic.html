@@ -21,9 +21,12 @@
 
 	
 			.centered-content img.img-500px {
-				width: 500px;
-				margin: 0 auto; /* to center the image */
+				width: 100%;
+				max-width: 500px; /* This ensures the image is never wider than 500px */
+				margin: 0 auto;   /* This centers the image */
+				display: block;   /* Ensures the margin works for centering */
 			}
+
 
 
 						/* Slideshow container */
