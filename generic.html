@@ -19,6 +19,70 @@
 				margin: 0 auto; /* to center the image */
 			}
 
+
+						/* Slideshow container */
+						.slideshow-container {
+				width: 100%;
+				max-width: 1000px; /* This will ensure the maximum width is 1000px */
+				position: relative;
+				margin: auto;
+			}
+
+			.mySlides img {
+				width: 100%;
+				height: auto;
+			}
+
+			.currentSlide {
+				display: block;
+			}
+
+
+			/* Navigation buttons */
+			.prev, .next {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				padding: 16px;
+				color: white; /* Arrow color */
+				font-weight: bold;
+				font-size: 18px;
+				transition: 0.6s ease;
+				border-radius: 0 3px 3px 0;
+				user-select: none;
+				transform: translateY(-50%); /* This ensures the button is vertically centered */
+			}
+
+			.prev {
+				left: 0;
+				background-color: black; /* Black background */
+			}
+
+			.next {
+				right: 0;
+				border-radius: 3px 0 0 3px;
+				background-color: black; /* Black background */
+			}
+
+			/* Adjusting the hover effect to slightly lighten the black background */
+			.prev:hover, .next:hover {
+				background-color: #333333; /* Dark gray when hovered for a subtle effect */
+			}
+
+			@media (max-width: 768px) {
+				h1, h2, h3, p {
+					font-size: 90%;
+					padding: 0.8rem;
+				}
+			}
+
+			@media (max-width: 480px) {
+				h1, h2, h3, p {
+					font-size: 80%;
+					padding: 0.5rem;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
