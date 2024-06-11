@@ -1,236 +1,261 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Allesandro's Course</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Existing styles... */
+<head>
+    <title>Data Transformation Services</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+        /* Additional styles */
+        .service-slider {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .service {
+            padding: 2em 0;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+        .service h3 {
+            margin-top: 0;
+        }
+        .service p {
+            margin-bottom: 0;
+        }
 
-			img.responsive-img {
-				width: 100%;
-				height: auto;
-			}
+        .pricelist img {
+            width: 100%;
+            max-width: 440px;
+            height: auto;
+            max-height: 700px;
+            object-fit: contain;
+            margin-top: 1em;
+        }
+        .pricelist {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+        }
+        .pricelist img {
+            margin: 1em;
+        }
 
-	
-			.centered-content img.img-500px {
-				width: 100%;
-				max-width: 500px; /* This ensures the image is never wider than 500px */
-				margin: 0 auto;   /* This centers the image */
-				display: block;   /* Ensures the margin works for centering */
-			}
+        /* .hero-section {
+            text-align: center;
+            padding: 5em 2em;
+            background-color: #f4f4f4; */
+        
+        .major h1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #333;
+        }
+        .major h1 span {
+            color: #e67e22;
+        }
+        .major p {
+            font-size: 1.5em;
+            color: #666;
+            margin-top: 1em;
+        }
+        .hero-section .button {
+            margin-top: 2em;
+            font-size: 1.2em;
+        }
+		.post h2 {
+            font-size: 2.5em;
+            color: #666;
+            margin-top: 1em;
+        }
+		
+    </style>
+</head>
+<body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Welcome</a>
+		</header>
+
+	<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html">Portfolio</a></li>
+				<li class="active"><a href="generic.html">Services</a></li>
+				<li><a href="elements.html">About Me</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://api.whatsapp.com/send?phone=6281944900917&text=Halo%20kak%2C%20saya%20mau%20tanya%20tentang%20jasa%20nya.." class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+				<li><a href="https://www.tiktok.com/@allesandroya" class="icon brands fa-tiktok"><span class="label">TikTok</span></a></li>
+				<li><a href="https://instagram.com/allesandroya?igshid=YTQwZjQ0NmI0OA==" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			</ul>						</ul>
+		</nav>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Hero Section -->
+        <section class="major">
+            <header class="major">
+                <h1>Strategi bikin kerjaan lebih ringan dan analisa data lebih mudah</h1>
+                <p>Ubah data kamu jadi dashboard interaktif dan transformasi data otomatis</p>
+                <a href="#CTA" onclick="smoothScroll('CTA')" class="button large">Mau Dong!</a>
 
 
-
-						/* Slideshow container */
-						.slideshow-container {
-				width: 100%;
-				max-width: 1000px; /* This will ensure the maximum width is 1000px */
-				position: relative;
-				margin: auto;
-			}
-
-			.mySlides img {
-				width: 100%;
-				height: auto;
-			}
-
-			.currentSlide {
-				display: block;
-			}
+            </header>
 
 
-			/* Navigation buttons */
-			.prev, .next {
-				cursor: pointer;
-				position: absolute;
-				top: 50%;
-				width: auto;
-				padding: 16px;
-				color: white; /* Arrow color */
-				font-weight: bold;
-				font-size: 18px;
-				transition: 0.6s ease;
-				border-radius: 0 3px 3px 0;
-				user-select: none;
-				transform: translateY(-50%); /* This ensures the button is vertically centered */
-			}
+        <!-- About Section -->
+        <section class="major">
+            <header class="major">
+                <!-- <h2>Tentang Kami</h2> -->
+            </header>
+            <p>
+                Bisa cepat paham performa bisnis, cepat ambil keputusan berdasarkan data, dan kerjaan cepat selesai, pastinya bikin waktumu lebih lega dan ngga sibuk ngurus data secara manual yang bikin pusing + waktu banyak terbuang.
+                <br><br>
+                
+            </p>
+        </section>
 
-			.prev {
-				left: 0;
-				background-color: black; /* Black background */
-			}
+        <!-- Services Section -->
+        <section id="services" class="post">
+            <header class="major">
+                <h2>4 Strategi Biar Kerjaan Cepat Kelar dan Analisa Data Lebih Mudah!</h2>
+            </header>
+            <div class="service-slider">
+                <div class="service">
+                    <h3>Bikin Dashboard Excel Interaktif</h3>
+                    <p>
+                        Dashboard ini penting banget biar kamu lebih cepat paham kondisi bisnis dan ambil kesimpulan berdasarkan data, dashboard yang efektif adalah dashboard yang interaktif, mudah dioperasikan, auto update, dan tampilan yang fresh, serta mampu meng-cover objektif dari user.
+                    </p>
+                    <a href="#" class="button">Contoh Dashboard</a>
+                </div>
+                <div class="service">
+                    <h3>Automated Data Processing</h3>
+                    <p>
+                        Masih olah data secara manual? Yuk bikin waktu kerjamu lebih efektif dan efisien pake tools VBA / Macro / Power Query / Python, yang pastinya enak banget karena kamu bisa fokus ke hal-hal yang lebih strategic, belum bisa pake tools tersebut? Yaudah sini saya kerjain hehe
+                    </p>
+                    <a href="#" class="button">Contoh Automasi</a>
+                </div>
+                <div class="service">
+                    <h3>Buat aplikasi dari Python</h3>
+                    <p>
+                        Apa itu Python? Python adalah bahasa pemrograman yang multifungsi, dengan Python, kita bisa buat aplikasi yang mempermudah kerjaan kamu, dan dapat kamu tentukan apa fungsi dan tujuannya, misal: Aplikasi untuk cek kualitas data, ubah tipe file dalam satu folder, mengirim email, dsb. semuanya secara otomatis!
+                    </p>
+                    <a href="#" class="button">Contoh Aplikasi</a>
+                </div>
+                <div class="service">
+                    <h3>Bikin Dashboard dengan Tableau</h3>
+                    <p>
+                        Tableau adalah Data Analytics tool yang keren banget! Gampang banget buat bikin visualisasi data yang cakep. Mau data dari mana aja, dari Excel sampai cloud, Tableau bisa handle. Plus, fitur machine learning-nya bikin analisis kita makin tajam.
+                    </p>
+                    <a href="#" class="button">Contoh Tableau</a>
+                </div>
+            </div>
+        </section>
 
-			.next {
-				right: 0;
-				border-radius: 3px 0 0 3px;
-				background-color: black; /* Black background */
-			}
+        <!-- Price List Section -->
+        <section id="pricelist" class="post">
+            <header class="major">
+                <h2>Price List</h2>
+            </header>
+            <div class="pricelist">
+                <img src="images/Excel Dashboard.png" alt="Excel Dashboard">
+                <img src="images/Tableau Dashboard.png" alt="Tableau Dashboard">
+                <img src="images/Data Automation.png" alt="Data Automation">
+                <img src="images/Python App.png" alt="Python App">
+            </div>
+        </section>
 
-			/* Adjusting the hover effect to slightly lighten the black background */
-			.prev:hover, .next:hover {
-				background-color: #333333; /* Dark gray when hovered for a subtle effect */
-			}
+        <!-- Call to Action -->
+        <section id="CTA" class="post">
+            <header class="major">
+                <h2>Tertarik? Yuk WA aja yaa 👇</h2>
+                <a href="https://wa.me/6285155155285" class="button large">WhatsApp</a>
+            </header>
+        </section>
 
-			@media (max-width: 768px) {
-				h1, h2, h3, p {
-					font-size: 90%;
-					padding: 0.8rem;
-				}
-			}
 
-			@media (max-width: 480px) {
-				h1, h2, h3, p {
-					font-size: 80%;
-					padding: 0.5rem;
-				}
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+    </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Welcome</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Portfolio</a></li>
-							<li class="active"><a href="generic.html">Courses</a></li>
-							<li><a href="elements.html">About Me</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://api.whatsapp.com/send?phone=6281944900917&text=Halo%20kak%2C%20saya%20mau%20tanya%20tentang%20jasa%20nya.." class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
-							<li><a href="https://www.tiktok.com/@allesandroya" class="icon brands fa-tiktok"><span class="label">TikTok</span></a></li>
-							<li><a href="https://instagram.com/allesandroya?igshid=YTQwZjQ0NmI0OA==" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						</ul>						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<span class="date">Courses</span>
-									<h1><br />
-									Tableau Course</h1>
-									<p>Pernah denger Tableau? Tableau adalah Data Analytics tool yang keren banget!
-										 Gampang banget buat bikin visualisasi data yang cakep. Mau data dari mana aja, 
-										 dari Excel sampai cloud, Tableau bisa handle. Plus, fitur machine learning-nya bikin analisis 
-										 kita makin tajam. Buat yang mau jagoan di analitik data, Tableau itu must-learn deh!
-										 klik foto dibawah ini untuk link course nya ya !</p>
-								</header>
-								<div class="image main centered-content">
-									<a href="https://rpy.club/g/ioJ2b9zYwL" target="_blank">
-										<img src="images/course.png" alt="" class="img-500px responsive-img" />
-									</a>
-								</div>
-								
-								<p>
-									<strong>Program belajar bersertifikat</strong><br><br>
-									Materi yang diajarkan:<br>
-									- Power Query untuk ETL (Extract, Transform, Load) & Data Update lebih mudah<br>
-									- Data Visualization Fundamentals<br>
-									- Tableau Basic to Advanced<br>
-									- Excel & Tableau study case<br>
-									- Dashboard Creation<br><br>
-									Bonus:<br>
-									- Instalasi Excel 2021 Full Version<br>
-									- Instalasi Tableau Desktop Full Version<br>
-									(Cracked)<br><br>
-									Sistem belajar menggunakan video recording, dan dapat bertanya secara langsung terkait materi di grup telegram, grup bisa di akses selamanya !!
-									Klik foto diatas untuk pendaftaran, atau boleh tanya-tanya dulu via WA yaa.
-									</p>
-									
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-				<footer id="footer">
-					<section>
-						<div class="footer-icons">
-							<ul class="icons">
-								<li><a href="https://api.whatsapp.com/send?phone=6281944900917&text=Halo%20kak%2C%20saya%20mau%20tanya%20tentang%20jasa%20nya.." class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
-								<li><a href="https://www.tiktok.com/@allesandroya" class="icon brands fa-tiktok"><span class="label">TikTok</span></a></li>
-								<li><a href="https://instagram.com/allesandroya?igshid=YTQwZjQ0NmI0OA==" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							</ul>
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<div class="footer-icons">
+					<ul class="icons">
+						<li><a href="https://api.whatsapp.com/send?phone=6281944900917&text=Halo%20kak%2C%20saya%20mau%20tanya%20tentang%20jasa%20nya.." class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+						<li><a href="https://www.tiktok.com/@allesandroya" class="icon brands fa-tiktok"><span class="label">TikTok</span></a></li>
+						<li><a href="https://instagram.com/allesandroya?igshid=YTQwZjQ0NmI0OA==" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</div>
+				<h3>Contact Me</h3>
+				<form method="post" action="https://formspree.io/f/mjvqrjqr">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" required />
 						</div>
-						<h3>Contact Me</h3>
-						<form method="post" action="https://formspree.io/f/mjvqrjqr">
-							<div class="fields">
-								<div class="field">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" required />
-								</div>
-								<div class="field">
-									<label for="email">Email</label>
-									<input type="email" name="_replyto" id="email" required />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="3" required></textarea>
-								</div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-					<!-- </section>
-					<section class="split contact">
-						<section class="alt">
-							<h3>Address</h3>
-							<p>1234 Somewhere Road #87257<br />
-							Nashville, TN 00000-0000</p>
-						</section>
-						<section>
-							<h3>Phone</h3>
-							<p><a href="#">(000) 000-0000</a></p>
-						</section>
-						<section>
-							<h3>Email</h3>
-							<p><a href="#">info@untitled.tld</a></p>
-						</section>
-						<section>
-							<h3>Social</h3>
-							<ul class="icons alt">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-							</ul>
-						</section>
-					</section>
-				</footer> -->
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; allesandroya</li><li>Clicky: <a href="https://clicky.id/allesandroya">clicky.id/allesandroya</a></li></ul>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="email" name="_replyto" id="email" required />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="3" required></textarea>
+						</div>
 					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
 
-			</div>
+		<div id="copyright">
+			<ul><li>&copy; allesandroya</li><li>Clicky: <a href="https://clicky.id/allesandroya">clicky.id/allesandroya</a></li></ul>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+</div>				
 
-	</body>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.service-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: false, // Remove arrows
+            dots: true,
+            pauseOnHover: true
+        });
+    });
+	function smoothScroll(target) {
+    const element = document.getElementById(target);
+    if (element) {
+        window.scrollTo({
+            top: element.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+
+
+</script>
+
+
+
+</body>
 </html>

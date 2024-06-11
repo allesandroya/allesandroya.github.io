@@ -21,13 +21,20 @@
 			}
 
 
-						/* Slideshow container */
-						.slideshow-container {
+			/* Slideshow container */
+			.slideshow-container {
 				width: 100%;
 				max-width: 1000px; /* This will ensure the maximum width is 1000px */
 				position: relative;
 				margin: auto;
 			}
+
+			/* Slides */
+			.slide {
+            display: none;
+            width: 100%;
+            height: auto;
+       		}
 
 			.mySlides img {
 				width: 100%;
@@ -36,6 +43,12 @@
 
 			.currentSlide {
 				display: block;
+			}
+
+			/* Animation */
+			@keyframes fade {
+				from {opacity: .4}
+				to {opacity: 1}
 			}
 
 
@@ -100,7 +113,7 @@
 					<nav id="nav">
 						<ul class="links">
 							<li><a href="index.html">Portfolio</a></li>
-							<li><a href="generic.html">Courses</a></li>
+							<li><a href="generic.html">Services</a></li>
 							<li class="active"><a href="elements.html">About Me</a></li>
 						</ul>
 						<ul class="icons">
