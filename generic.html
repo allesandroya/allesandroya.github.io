@@ -99,7 +99,7 @@
 
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="logo">Welcome</a>
+			<a href="index.html" class="logo">@allesandroya</a>
 		</header>
 
 	<!-- Nav -->
@@ -124,7 +124,7 @@
             <header class="major">
                 <h1>Strategi bikin kerjaan lebih ringan dan analisa data lebih mudah</h1>
                 <p>Ubah data kamu jadi dashboard interaktif dan transformasi data otomatis</p>
-                <a href="#CTA" onclick="smoothScroll('CTA')" class="button large">Mau Dong!</a>
+                <a href="#pricelist" class="button large">Mau Dong!</a>
 
 
             </header>
@@ -153,28 +153,36 @@
                     <p>
                         Dashboard ini penting banget biar kamu lebih cepat paham kondisi bisnis dan ambil kesimpulan berdasarkan data, dashboard yang efektif adalah dashboard yang interaktif, mudah dioperasikan, auto update, dan tampilan yang fresh, serta mampu meng-cover objektif dari user.
                     </p>
-                    <a href="#" class="button">Contoh Dashboard</a>
+                    <h3>Dashboard Mess Untuk Monitoring Kamar</h3>
+                    <img src="images/Gif 3.gif" alt="Gif Dashboard">
+                    <a href="index.html" class="button">Contoh Lain</a>
                 </div>
                 <div class="service">
-                    <h3>Automated Data Processing</h3>
+                    <h3>Automated Data Processing</h3> 
                     <p>
                         Masih olah data secara manual? Yuk bikin waktu kerjamu lebih efektif dan efisien pake tools VBA / Macro / Power Query / Python, yang pastinya enak banget karena kamu bisa fokus ke hal-hal yang lebih strategic, belum bisa pake tools tersebut? Yaudah sini saya kerjain hehe
                     </p>
-                    <a href="#" class="button">Contoh Automasi</a>
+                    <h3>Update Data Otomatis Dari Berbagai Sumber</h3>
+                    <img src="images/Gif 18.gif" alt="Gif Data">
+                    <a href="index.html" class="button">Contoh Lain</a>
                 </div>
                 <div class="service">
                     <h3>Buat aplikasi dari Python</h3>
                     <p>
-                        Apa itu Python? Python adalah bahasa pemrograman yang multifungsi, dengan Python, kita bisa buat aplikasi yang mempermudah kerjaan kamu, dan dapat kamu tentukan apa fungsi dan tujuannya, misal: Aplikasi untuk cek kualitas data, ubah tipe file dalam satu folder, mengirim email, dsb. semuanya secara otomatis!
+                        Apa itu Python? Python adalah bahasa pemrograman yang multifungsi, dengan Python, kita bisa buat aplikasi yang mempermudah kerjaan kamu, dan dapat kamu tentukan apa fungsi dan tujuannya, misal: Aplikasi untuk cek kualitas data, ubah tipe file dalam satu folder, mengirim email, dsb.
                     </p>
-                    <a href="#" class="button">Contoh Aplikasi</a>
+                    <h3>Aplikasi Multifungsi Request Klien</h3>
+                    <img src="images/Gif 19.gif" alt="Gif Data">
+                    <a href="index.html" class="button">Contoh Lain</a>
                 </div>
                 <div class="service">
                     <h3>Bikin Dashboard dengan Tableau</h3>
                     <p>
                         Tableau adalah Data Analytics tool yang keren banget! Gampang banget buat bikin visualisasi data yang cakep. Mau data dari mana aja, dari Excel sampai cloud, Tableau bisa handle. Plus, fitur machine learning-nya bikin analisis kita makin tajam.
                     </p>
-                    <a href="#" class="button">Contoh Tableau</a>
+                    <h3>Dashboard BPJS Untuk Analisa Keuangan</h3>
+                    <img src="images/Gif 17.gif" alt="Gif Tableau Dashboard">
+                    <a href="index.html" class="button">Contoh Lain</a>
                 </div>
             </div>
         </section>
@@ -196,7 +204,7 @@
         <section id="CTA" class="post">
             <header class="major">
                 <h2>Tertarik? Yuk WA aja yaa 👇</h2>
-                <a href="https://wa.me/6285155155285" class="button large">WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?phone=6285155155285&text=Halo%20kak%2C%20saya%20mau%20tanya%20tentang%20jasa%20nya.." class="button large">WhatsApp</a>
             </header>
         </section>
 
@@ -260,18 +268,20 @@
             dots: true,
             pauseOnHover: true
         });
-    });
-	function smoothScroll(target) {
-    const element = document.getElementById(target);
-    if (element) {
-        window.scrollTo({
-            top: element.offsetTop,
-            behavior: 'smooth'
+
+        // Smooth scroll for links with hashes
+        $('a[href*="#"]').on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
         });
-    }
-}
-
-
+    });
 </script>
 
 
