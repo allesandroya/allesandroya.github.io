@@ -127,10 +127,22 @@
     .detail.solution{background:linear-gradient(180deg,rgba(var(--emerald),.16),rgba(var(--emerald),.06));border-color:rgba(var(--emerald),.28)}
     .detail.solution .head{color:rgba(var(--emerald),.92)}
 
+    /* Improve project card title contrast (global) */
+    .card div[style*="font-weight"]{
+      color:#eaf4ff !important;
+      text-shadow:0 0 6px rgba(56,189,248,.25);
+    }
+    .card:hover div[style*="font-weight"]{
+      color:#7dd3fc !important;
+    }
+
+
+
     /* ✅ Mobile polish + hero fix + mobile background */
     @media (max-width:720px){
       :root{--header-h:60px}
       header{background:linear-gradient(to bottom,rgba(11,18,32,.98),rgba(11,18,32,.85))}
+      
       .menu{display:none}
       .hero{grid-template-columns:1fr;gap:14px;align-items:start}
       .hero-card{padding:14px}
