@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 <head>
@@ -322,3 +323,480 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+=======
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Allesandro Yudo Asmara — Portfolio (Static HTML) -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Allesandro Yudo Asmara — Portfolio</title>
+  <meta name="description" content="Allesandro Yudo Asmara — Data Analyst & Excel Expert. Portfolio, projects, experience, and contact." />
+  <meta name="theme-color" content="#0f172a" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Allesandro Yudo Asmara — Portfolio" />
+  <meta property="og:description" content="Data analytics, dashboards, automation. Excel · Sheets · SQL · Python · Power BI · Tableau · Looker." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io/" />
+  <meta property="og:image" content="images/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Allesandro Yudo Asmara — Portfolio" />
+  <meta name="twitter:description" content="Data analytics, dashboards, automation. Excel · Sheets · SQL · Python · Power BI · Tableau · Looker." />
+  <meta name="twitter:image" content="images/og-cover.png" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root {
+      --bg: #0b1220;          /* slate-950 */
+      --panel: #0f172a;       /* slate-900 */
+      --muted: #94a3b8;       /* slate-400 */
+      --text: #e2e8f0;        /* slate-200 */
+      --brand: #38bdf8;       /* sky-400 */
+      --brand-2: #22d3ee;     /* cyan-400 */
+      --ring: rgba(56, 189, 248, 0.35);
+      --card: #111827;        /* gray-900 */
+      /* Subtle dark-tinted variants (for Problem/Objective/Solution) */
+      --rose: 244,63,94;      /* rose-500 */
+      --indigo: 99,102,241;   /* indigo-500 */
+      --emerald: 16,185,129;  /* emerald-500 */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(34,211,238,0.08), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(56,189,248,0.10), transparent 60%),
+                  var(--bg);
+      line-height: 1.6;
+      letter-spacing: 0.2px;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+
+    header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); background: linear-gradient(to bottom, rgba(11,18,32,0.85), rgba(11,18,32,0.45)); border-bottom: 1px solid rgba(148,163,184,0.15); }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    .brand-badge { width: 28px; height: 28px; border-radius: 9px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 3px rgba(56,189,248,0.25); }
+    .menu { display: flex; gap: 22px; }
+    .menu a { color: var(--text); opacity: 0.85; }
+    .menu a:hover { opacity: 1; }
+    .cta { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(90deg,var(--brand),var(--brand-2)); color: #001018; font-weight: 700; border-radius: 12px; padding: 10px 14px; box-shadow: 0 6px 24px rgba(34,211,238,0.25); }
+    .cta:hover { filter: brightness(1.1); text-decoration: none; }
+
+    section { padding: 64px 0; scroll-margin-top: 90px; }
+    h1, h2, h3 { line-height: 1.25; margin: 0 0 14px; }
+    h1 { font-size: clamp(28px, 4vw, 44px); }
+    h2 { font-size: clamp(22px, 3vw, 30px); margin-bottom: 18px; }
+    p.lead { font-size: clamp(16px, 2.1vw, 18px); color: var(--muted); }
+
+    .hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+    .hero-card { background: linear-gradient(180deg, rgba(15,23,42,0.6), rgba(15,23,42,0.3)); border: 1px solid rgba(148,163,184,0.18); border-radius: 18px; padding: 28px; box-shadow: 0 12px 40px rgba(2,6,23,0.5); }
+    .pill { display: inline-flex; gap: 8px; align-items: center; background: rgba(148,163,184,0.1); padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.2); font-size: 12px; letter-spacing: 0.3px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+    .grid { display: grid; gap: 16px; }
+    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .card { background: linear-gradient(180deg, rgba(17,24,39,0.9), rgba(17,24,39,0.75)); border: 1px solid rgba(148,163,184,0.14); border-radius: 16px; padding: 18px; transition: transform .15s ease, border-color .15s ease; }
+    .card:hover { transform: translateY(-3px); border-color: rgba(34,211,238,0.35); }
+    .card h3 { font-size: 18px; margin: 0 0 6px; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .project-thumb { aspect-ratio: 16/9; width: 100%; border-radius: 12px; background: #0b1220; border: 1px solid rgba(148,163,184,0.15); display: grid; place-items: center; font-size: 12px; color: var(--muted); margin-bottom: 10px; overflow: hidden; }
+    .project-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+    .chip { font-size: 12px; padding: 6px 10px; border: 1px solid rgba(148,163,184,0.25); border-radius: 999px; color: var(--muted); }
+
+    .list { display: grid; gap: 10px; }
+    .list li { background: linear-gradient(180deg, rgba(17,24,39,0.6), rgba(17,24,39,0.4)); border: 1px solid rgba(148,163,184,0.12); padding: 12px 14px; border-radius: 12px; }
+
+    .contact { background: linear-gradient(180deg, rgba(34,211,238,0.06), transparent 40%); border: 1px dashed rgba(56,189,248,0.35); border-radius: 16px; padding: 20px; }
+
+    footer { padding: 34px 0; color: var(--muted); font-size: 14px; border-top: 1px solid rgba(148,163,184,0.14); margin-top: 20px; }
+
+    /* Gallery controls */
+    .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .segment { display: inline-flex; overflow: hidden; border-radius: 12px; border: 1px solid rgba(148,163,184,0.25); background: rgba(15,23,42,0.4); }
+    .segment button{ padding: 8px 12px; color: var(--text); background: transparent; border: 0; cursor: pointer; }
+    .segment button.active{ background: linear-gradient(90deg,var(--brand),var(--brand-2)); color: #001018; font-weight: 700; }
+    .search{ position: relative; }
+    .search input{ background: rgba(15,23,42,0.6); border: 1px solid rgba(148,163,184,0.25); color: var(--text); padding: 10px 12px 10px 36px; border-radius: 12px; min-width: 240px; }
+    .search .icon{ position: absolute; left: 10px; top: 50%; transform: translateY(-50%); opacity: .6; }
+
+    /* Modal */
+    .modal{ position: fixed; inset: 0; display: none; place-items: center; padding: 20px; z-index: 100; }
+    .modal.open{ display: grid; }
+    .modal .shade{ position: absolute; inset: 0; background: rgba(0,0,0,.6); }
+    .modal .panel{ position: relative; z-index: 1; width: min(1000px, 96vw); background: #0d1526; border: 1px solid rgba(148,163,184,0.25); border-radius: 16px; box-shadow: 0 30px 100px rgba(0,0,0,.4); }
+    .modal .panel header{ display:flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid rgba(148,163,184,0.18); background: rgba(13,21,38,0.85); backdrop-filter: blur(8px); position: sticky; top:0; border-radius: 16px 16px 0 0; }
+    .btns{ display:flex; gap:8px; }
+    .btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:12px; border:1px solid rgba(148,163,184,.25); background: rgba(17,24,39,.5); color:var(--text); cursor:pointer; text-decoration:none; }
+    .btn.primary{ background: linear-gradient(90deg,var(--brand),var(--brand-2)); color:#001018; border-color: transparent; font-weight:700; }
+    .modal .panel h3{ margin: 0; font-size: 18px; }
+    .modal .panel .body{ padding: 18px; display: grid; gap: 18px; grid-template-columns: 1.25fr .9fr; }
+    .modal .panel .media{ border: 1px solid rgba(148,163,184,0.18); border-radius: 12px; overflow: hidden; background: #000; display: grid; place-items: center; }
+    .modal .panel .media img{ width: 100%; height: 100%; object-fit: contain; max-height: 70vh; background: #000; }
+    .modal .panel .stack{ display: grid; gap: 12px; }
+
+    /* Dark-friendly variant cards (Problem / Objective / Solution) */
+    .detail{ border-radius: 12px; border:1px solid rgba(148,163,184,.18); padding: 12px; background: rgba(17,24,39,.65); }
+    .detail .head{ display:flex; align-items:center; gap:8px; font-weight:700; }
+    .detail .txt{ margin-top:6px; font-size:14px; color:var(--text); line-height:1.65; }
+
+    .detail.problem{ background: linear-gradient(180deg, rgba(var(--rose),.16), rgba(var(--rose),.06)); border-color: rgba(var(--rose),.28); }
+    .detail.problem .head{ color: rgba(var(--rose),.9); }
+
+    .detail.objective{ background: linear-gradient(180deg, rgba(var(--indigo),.16), rgba(var(--indigo),.06)); border-color: rgba(var(--indigo),.28); }
+    .detail.objective .head{ color: rgba(var(--indigo),.92); }
+
+    .detail.solution{ background: linear-gradient(180deg, rgba(var(--emerald),.16), rgba(var(--emerald),.06)); border-color: rgba(var(--emerald),.28); }
+    .detail.solution .head{ color: rgba(var(--emerald),.92); }
+
+    @media (max-width: 880px) { .hero { grid-template-columns: 1fr; } .grid.cols-3 { grid-template-columns: 1fr 1fr; } .modal .panel .body{ grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; } .menu { display: none; } .search input{ min-width: 0; width: 100%; } }
+
+    :focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 6px; }
+  </style>
+  <script>
+    // Smooth scroll for internal anchors
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const id = a.getAttribute('href');
+          if (id.length > 1) {
+            e.preventDefault();
+            document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    });
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Allesandro Yudo Asmara",
+    "url": "https://YOUR-USERNAME.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/allesandro-yudo-8a80bb163/",
+      "https://github.com/allesandroya"
+    ],
+    "jobTitle": "Data Analyst",
+    "worksFor": { "@type": "Organization", "name": "Kerja.id" }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-badge" aria-hidden="true"></div>
+        <a href="#top" style="font-size: 14px; letter-spacing: 0.5px;">Allesandro Yudo</a>
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="cta" href="assets/CV%20Allesandro%20ATS.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- Hero -->
+    <section class="hero" aria-label="Intro">
+      <div>
+        <span class="pill">Hi there ✌️ · Available for work</span>
+        <h1>I'm <span style="background: linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent;">Allesandro Yudo Asmara</span> — Data Analyst & Excel Expert.</h1>
+        <p class="lead">I blend <strong>business</strong> × <strong>technology</strong> to ship dashboards, automations, and training that accelerate decisions. Tools: Excel, Sheets, SQL, Python, Tableau, Power BI, Looker. Detail‑oriented, outcome‑driven, and fast to deliver.</p>
+        <div class="badges" aria-label="Highlights">
+          <span class="chip">Microsoft Excel Expert (MOS)</span>
+          <span class="chip">3,000+ Learners</span>
+          <span class="chip">Kerja.id</span>
+        </div>
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="cta" href="#projects">See Projects</a>
+          <a class="pill" href="mailto:allesandroya@gmail.com">Email → allesandroya@gmail.com</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="project-thumb" style="height: 260px; padding:0;">
+          <img src="images/photo.jpg" alt="Profile photo" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+        <ul class="list" style="margin-top:10px;">
+          <li>🏆 <strong>Microsoft Office Specialist — Excel Expert (Certified)</strong></li>
+          <li>🎥 <strong>Content Creator</strong> — 48k social followers</li>
+          <li>🎯 <strong>Educator</strong> — helped 3,000+ learners upgrade their data skills at Kerja.id</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p class="lead">Hello, I'm Sandro. Passionate about the synergy of business and technology. I build <em>clean pipelines</em>, <em>useful dashboards</em>, and <em>lightweight automations</em> for real‑world teams — from F&B and retail to insurance and education. I’m a detail‑oriented problem solver committed to delivering high‑quality results promptly.</p>
+      <div class="grid cols-3" style="margin-top:16px;">
+        <div class="card"><h3>What I do</h3><p>ETL with Power Query/Python, data modeling (star schema), KPI dashboards, Excel/Sheets automation, training & documentation.</p></div>
+        <div class="card"><h3>How I work</h3><p>Start with decisions → metrics → minimal MVP. Iterate fast with feedback; measure time saved & business impact.</p></div>
+        <div class="card"><h3>Impact</h3><p>Cut manual prep by 80% via automation; accelerated reporting; taught hundreds with 5/5 average rating.</p></div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <div class="grid cols-3">
+        <div class="card"><h3>Data & BI</h3><p>Excel, Power Query, Power Pivot, Power BI, Google Sheets, Looker Studio, Tableau</p></div>
+        <div class="card"><h3>Programming</h3><p>Python (pandas), SQL (BigQuery), VBA, Apps Script, OOP, Prompt Engineering</p></div>
+        <div class="card"><h3>Soft Skills</h3><p>Problem solving, analytical thinking, public speaking, leadership, communication</p></div>
+      </div>
+    </section>
+
+    <!-- Projects / Gallery -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <p class="lead">Click a card to view details. Each project includes <strong>⚠️ Problem</strong>, <strong>🎯 Objective</strong>, and <strong>🛠️ Solution</strong> with subtle dark‑tinted color accents.</p>
+
+      <div class="controls" style="margin: 16px 0; justify-content: space-between; gap:12px;">
+        <div class="segment" id="seg-tools" role="tablist" aria-label="Filter by tool"></div>
+        <label class="search" style="flex:1; max-width: 420px;">
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input id="q" type="search" placeholder="Search: retail, geo map, KPI…" />
+        </label>
+      </div>
+
+      <div id="gallery" class="grid cols-3" aria-live="polite" style="gap:18px;"></div>
+      <div style="display:flex; justify-content:center; margin-top:18px;">
+        <button id="toggleMore" class="cta" style="padding:10px 14px;">Show All Projects</button>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal" id="modal" aria-hidden="true" aria-label="Project detail dialog">
+        <div class="shade" id="modalShade"></div>
+        <div class="panel" role="document">
+          <header>
+            <div>
+              <h3 id="mTitle">Title</h3>
+              <div id="mIndustry" style="color:#94a3b8; margin-top:4px; font-size:14px;">Industry</div>
+            </div>
+            <div class="btns">
+              <a id="mFull" class="btn" href="#" target="_blank" rel="noopener">Full view ↗</a>
+              <button id="mClose" class="btn primary" aria-label="Close">Close ✕</button>
+            </div>
+          </header>
+          <div class="body">
+            <div class="media"><img id="mMedia" alt="preview" /></div>
+            <div class="stack">
+              <div class="detail problem">
+                <div class="head">⚠️ Problem</div>
+                <div id="mProblem" class="txt"></div>
+              </div>
+              <div class="detail objective">
+                <div class="head">🎯 Objective</div>
+                <div id="mObjective" class="txt"></div>
+              </div>
+              <div class="detail solution">
+                <div class="head">🛠️ Solution</div>
+                <div id="mSolution" class="txt"></div>
+              </div>
+              <div class="detail" id="mResultsWrap" style="display:none;">
+                <div class="head">✅ Results & Impact</div>
+                <ul id="mResults" class="txt" style="margin:6px 0 0 18px; list-style:disc;"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" aria-labelledby="exp-title">
+      <h2 id="exp-title">Experience</h2>
+      <ul class="list" aria-label="Timeline">
+        <li><strong>Developer & Instructor — Kerja.id</strong> · Jan 2024—Present<div style="color: var(--muted);">Built LMS, authored Excel-for-DA curriculum (eBooks + exercises), mentored hundreds (avg 5/5 rating).</div></li>
+        <li><strong>Market Data Analyst Manager — PT. Pesta Porta Abadi</strong> · Oct 2024—Mar 2025<div style="color: var(--muted);">Built BigQuery pipelines (Sheets/POS/API), Looker dashboards, and a Python geo-mapping app; improved tracking & decisions.</div></li>
+        <li><strong>Data QA Engineer (IFRS17) — FWD Insurance</strong> · May 2023—Oct 2024<div style="color: var(--muted);">Automation with Excel VBA/Python; rigorous data quality validation; ETL mapping & UAT support.</div></li>
+        <li><strong>Data Analytics Student Development Coordinator — RevoU</strong> · Nov 2023—May 2024<div style="color: var(--muted);">Ensured learning experience & curriculum alignment; reporting & QC for student activities.</div></li>
+        <li><strong>Data & Excel Content Creator & Freelancer — Self‑Employed</strong> · Jan 2023—Present<div style="color: var(--muted);">Content & services for Excel/Data; clients incl. BCA Insurance, PLN Icon Plus, Monde, Adaro Services, SJEC, BPR Arto Moro, etc.</div></li>
+        <li><strong>Data Analyst — PT. Medikal Putri Sharavasti</strong> · Aug 2022—Jan 2023<div style="color: var(--muted);">Data cleaning/analysis, ad‑hoc reports & visualizations to answer business questions.</div></li>
+        <li><strong>Data Analyst Associate (Virtual Internship) — RevoU × Astro</strong> · Sep 2022—Nov 2022<div style="color: var(--muted);">Led projects; dashboards by level; ML clustering for marketing; forecasting & simulation.</div></li>
+        <li><strong>Small Business Owner — Bubobi</strong> · Mar 2020—Apr 2021<div style="color: var(--muted);">Built & ran a boba brand; learned digital marketing, ops, selling, resource mgmt.</div></li>
+        <li><strong>Supervisor HRD — Ramayana</strong> · Mar 2019—Jun 2020<div style="color: var(--muted);">Leadership & coordination foundations supporting later analytics roles.</div></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="contact">
+        <p class="lead" style="margin:0 0 10px;">Have a project, role, or collab in mind? Let’s talk.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="cta" href="mailto:allesandroya@gmail.com">Email</a>
+          <a class="pill" href="https://www.linkedin.com/in/allesandro-yudo-8a80bb163/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="pill" href="https://kerja.id" target="_blank" rel="noopener">Kerja.id</a>
+          <a class="pill" href="https://read.cv/allesandroya" target="_blank" rel="noopener">read.cv</a>
+          <a class="pill" href="https://wa.me/6281944900917" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <span>© <span id="y"></span> Allesandro Yudo Asmara</span>
+        <span>Made with ♥ — <a href="#top">back to top</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    /* =========================
+       PROJECT DATA — English copy; thumbnails PNG/JPG, detail GIF optional
+       ========================= */
+    const PROJECTS = [
+      { id:"c-ex1", title:"Mess Dashboard", client:"Government / Military", tool:"Excel", industry:"Occupancy / Room Allocation", tags:["Occupancy","Room Allocation","Check-in/out"], thumb:"images/Excel1.png", thumbFallback:"images/Excel1.jpg", media:"images/Excel1.gif", featured:true, problem:"Managers struggled to track vacant/occupied rooms by area & division and maintain check‑in/out history. Data was scattered and updated manually.", objective:"Provide a single dashboard with real‑time occupancy by area/division, a vacancy list, and a date/time‑based history.", solution:"Simple model + Excel (Power Query + Pivot) to consolidate sources and visualize occupancy. Clean UI aligned with the organization’s theme.", results:["Room allocation time dropped from hours to minutes.","Double assignments reduced significantly.","Transparent, auditable allocation across divisions."] },
+      { id:"c-ex2", title:"Doctor App Training Monitor", client:"Hospital", tool:"Excel", industry:"Training / Adoption", tags:["Training","Adoption"], thumb:"images/Excel2.png", thumbFallback:"images/Excel2.jpg", media:"images/Excel2.gif", problem:"Leadership needed to track which doctors/roles had attended training and actively used the app.", objective:"Monitor training progress & adoption rate per doctor/role, including active/inactive status.", solution:"Power Query to clean attendance/usage data; pivot to track status; adoption & certification KPIs.", results:["Training gaps surfaced quickly","Adoption rate improved"] },
+      { id:"c-ex3", title:"Stock & Reorder Tracker", client:"Retail", tool:"Excel", industry:"Warehouse", tags:["Reorder","Cashflow"], thumb:"images/Excel3.png", thumbFallback:"images/Excel3.jpg", media:"images/Excel3.gif", featured:true, problem:"Hard to track in/out stock, reorder time, and cashflow impact.", objective:"Track stock & reorder points plus simple cash‑in/out for control.", solution:"Excel modeling (safety stock, reorder) + compact dashboard with restock alerts.", results:["Fewer stockouts","More precise purchase planning"] },
+      { id:"c-ex4", title:"Target Sales Tracker", tool:"Excel", industry:"Sales", tags:["Target vs Actual","Gantt","Team Coloring"], thumb:"images/Excel4.png", thumbFallback:"images/Excel4.jpg", media:"images/Excel4.gif", problem:"Leaders could not instantly see who hit monthly quotas and overall team progress.", objective:"Show target vs actual per salesperson/month with Gantt‑style views and team color coding.", solution:"Model target/actual by month; pseudo‑Gantt in Excel; dynamic colors per team; KPI cards for achievement & gaps." },
+      { id:"c-ex5", title:"Project & Budget Tracker", tool:"Excel", industry:"PMO / Ops", tags:["Timeline","Priority","Budget"], thumb:"images/Excel5.png", thumbFallback:"images/Excel5.jpg", media:"images/Excel5.gif", problem:"Multiple projects ran in parallel without a tidy summary: dates, %progress, priorities, and budget realization were fragmented.", objective:"Unify core project status and a budget page to view usage vs allocation.", solution:"Project table (start/end/%progress/priority), simple kanban/Gantt, budget breakdown & variance, filters by PIC/team." },
+      { id:"c-ex6", title:"Smartphone Sales Dashboard", client:"Retail Gadget", tool:"Excel", industry:"Sales", tags:["Time series","Dynamic metric"], thumb:"images/Excel6.png", thumbFallback:"images/Excel6.jpg", media:"images/Excel6.gif", problem:"Analysts needed to switch metrics (sales, profit, transactions, qty) on the fly.", objective:"Analyze sales by area/type and time series with switchable metrics.", solution:"Parameters + formulas & Pivot for dynamic metrics; lightweight UI for quick toggles." },
+      { id:"c-ex7", title:"Training Compliance by Directorate", tool:"Excel", industry:"Public Sector / HR", tags:["Compliance","Gap Analysis"], thumb:"images/Excel7.png", thumbFallback:"images/Excel7.jpg", media:"images/Excel7.gif", problem:"HR needed to track which employees had/had not met training requirements by directorate and which modules were missing.", objective:"Provide a clear list of employees not yet compliant plus required modules.", solution:"Match job competency lists with training status; auto gap list per directorate; filters for names/roles; export for HR follow‑up." },
+      { id:"c-ex8", title:"Employee Dashboard (Attrition, HDRF, PISA)", tool:"Excel", industry:"HR", tags:["Headcount","Attrition","Utilization","Compliance"], thumb:"images/Excel8.png", thumbFallback:"images/Excel8.jpg", media:"images/Excel8.gif", problem:"Management required an overview of current headcount, turnover, HDRF utilization, and PISA submission status.", objective:"Provide a holistic view of workforce health and program compliance.", solution:"ETL HR master + participation logs; attrition & utilization KPIs; monthly trends; segmentation by unit/grade; submission indicators." },
+      { id:"c-ex9", title:"Project Monitoring + RAID", tool:"Excel", industry:"PMO / Ops", tags:["Timeline","RAID","Issue Tracking"], thumb:"images/Excel9.png", thumbFallback:"images/Excel9.jpg", media:"images/Excel9.gif", problem:"Teams lacked a central place to track project status and RAID (Risks, Assumptions, Issues, Dependencies).",
+        objective:"Centralize status and RAID lists to accelerate escalation and decisions.", solution:"Status summary & timeline plus RAID with owner/severity/due date and action recommendations; filters by project/PIC." },
+      { id:"c-ex10", title:"Transport Management (VBA)", client:"Logistics", tool:"Excel", industry:"Transport", tags:["Tonnage","VBA"], thumb:"images/Excel10.png", thumbFallback:"images/Excel10.jpg", media:"images/Excel10.gif", problem:"Monthly manual refresh was slow.", objective:"Enable dynamic monthly file selection and refresh for tonnage dashboards by date/company.", solution:"VBA for file pick & refresh; Query + Pivot for visuals." },
+      { id:"c-gs1", title:"Data Cleaning & Analytics Doc", client:"Supermarket", tool:"Google Sheets", industry:"Analytics", tags:["Documentation","Cleaning"], thumb:"images/Googlesheet1.png", thumbFallback:"images/Googlesheet1.jpg", media:"images/Googlesheet1.gif", problem:"Cleaning process documentation and store insights were messy.", objective:"Produce a simple report on sales/customer patterns.", solution:"Doc template + cleaning log in Sheets; concise insights." },
+      { id:"c-look1", title:"FnB Store Performance", client:"F&B", tool:"Looker Studio", industry:"Sales / Finance", tags:["CAPEX","OPEX","Geo"], thumb:"images/Looker1.png", thumbFallback:"images/Looker1.jpg", media:"images/Looker1.gif", featured:true, problem:"Owner wanted to monitor targets and expenses by city/province without paid BI licenses.", objective:"Shareable marketing/finance dashboard quickly.", solution:"Looker Studio (free) + GA4/Ads + spreadsheets; geo visuals & KPIs." },
+      { id:"c-look2", title:"KOL Endorsement Tracker", client:"Agency", tool:"Looker Studio", industry:"Marketing", tags:["Pipeline","Impact"], thumb:"images/Looker2.png", thumbFallback:"images/Looker2.jpg", media:"images/Looker2.gif", problem:"Hard to monitor which KOLs were not yet dealt/in progress/completed and the impact.", objective:"End‑to‑end KOL pipeline tracking with Google‑style theme.", solution:"Looker + Sheet (form) for status & impact scoring." },
+      { id:"c-pbi1", title:"Store Sales + Discount Simulator", client:"Retail", tool:"Power BI", industry:"Sales", tags:["Geo map","Discount"], thumb:"images/Powerbi1.png", thumbFallback:"images/Powerbi1.jpg", media:"images/Powerbi1.gif", problem:"Need to simulate discounts by product and visualize sales by province.", objective:"Quick analysis of sales & discount impact.", solution:"Star schema + DAX discount parameter; map visual.", results:["Discount experiments became measurable","Clear view of area performance"] },
+      { id:"c-tab1", title:"RFM Analysis", client:"E‑commerce", tool:"Tableau", industry:"CRM", tags:["Segmentation","RFM"], thumb:"images/Tableau1.png", thumbFallback:"images/Tableau1.jpg", media:"images/Tableau1.gif", featured:true, problem:"Marketing needed customer segments with explainable reasons.", objective:"Dashboard showing segment proportions & scoring rationale.", solution:"Tableau best‑practice viz with concise tooltips.", results:["Faster audience selection","Early campaign uplift observed"] },
+      { id:"c-tab2", title:"RFM Analysis — Customer Detail", tool:"Tableau", industry:"E‑Commerce / Retail", tags:["RFM Detail","Customer 360"], thumb:"images/Tableau2.png", thumbFallback:"images/Tableau2.jpg", media:"images/Tableau2.gif", problem:"After the overview, the team needed to inspect each customer's recency/frequency/monetary and segment.", objective:"Provide detailed customer view with scores & history.", solution:"Customer table with R/F/M, segment filters, drill links to transactions; export for CRM campaigns." },
+      { id:"c-tab3", title:"Fleet Administration Monitor", tool:"Tableau", industry:"Marine", tags:["Compliance","Budget Usage"], thumb:"images/Tableau3.png", thumbFallback:"images/Tableau3.jpg", media:"images/Tableau3.gif", problem:"Need to check each vessel's administrative completeness and budgets used.", objective:"Provide compliance status per vessel and related costs summary.", solution:"Document checklist, green/red indicators, cost recap by vessel/period; filters by fleet & route." },
+      { id:"c-tab4", title:"Fleet Status & Value", tool:"Tableau", industry:"Marine", tags:["Asset Value","Destination","Vendor"], thumb:"images/Tableau4.png", thumbFallback:"images/Tableau4.jpg", media:"images/Tableau4.gif", problem:"Management wanted to see vessel values, destinations, providers, and monthly dynamics.", objective:"Comprehensive view of asset values and movements by vendor/destination.", solution:"Vessel asset model, monthly value/budget trends, vendor/destination breakdowns, deviation indicators." },
+      { id:"c-tab5", title:"Smartphone Sales (Branches)", client:"Retail Gadget", tool:"Tableau", industry:"Sales", tags:["Branch","Type","Spend"], thumb:"images/Tableau5.png", thumbFallback:"images/Tableau5.jpg", media:"images/Tableau5.gif", problem:"Need a concise summary of sales & spend across branches/brands/types.", objective:"KPI dashboard with quick drilldowns.", solution:"Star schema + interactive visuals." },
+      { id:"c-tab6", title:"Financial Development Dashboard", tool:"Tableau", industry:"Finance", tags:["Dept","Cost Center","Revenue","Expenses"], thumb:"images/Tableau6.png", thumbFallback:"images/Tableau6.jpg", media:"images/Tableau6.gif", problem:"Leadership needed to monitor economic value per department/cost centre, revenue & expenses, and sales trends.", objective:"Comprehensive finance dashboard to track performance & cost efficiency.", solution:"P&L by dept/cost centre, revenue/expense trends, variance vs target, drill to large transactions." },
+      { id:"c-tab7", title:"KPI Sales Dashboard", tool:"Tableau", industry:"Sales", tags:["Target vs Actual","Province","Agent"], thumb:"images/Tableau7.png", thumbFallback:"images/Tableau7.jpg", media:"images/Tableau7.gif", problem:"Need to monitor target vs actual, revenue by province, and agent achievement.", objective:"Highlight achievements and gaps immediately.", solution:"KPI cards, provincial map, agent leaderboard, time/product filters; gap highlighting for coaching." },
+      { id:"c-tab8", title:"BPJS Health — Comprehensive", client:"Healthcare", tool:"Tableau", industry:"Insurance / Health", tags:["Diagnosis","Premium","City"], thumb:"images/Tableau8.png", thumbFallback:"images/Tableau8.jpg", media:"images/Tableau8.gif", problem:"Need a comprehensive view: diseases, insurance levels, premiums, city costs, demographics, etc.", objective:"Full exploration with executive summary.", solution:"Multi‑page Tableau with bookmarks; advanced visuals." }
+    ];
+
+    const TOOL_OPTIONS = ["All","Excel","Google Sheets","Looker Studio","Power BI","Tableau"];  
+
+    let filter = 'All';
+    let query = '';
+    let showAll = false;
+
+    const seg = document.getElementById('seg-tools');
+    TOOL_OPTIONS.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.textContent = opt; btn.setAttribute('role','tab');
+      btn.addEventListener('click', () => { filter = opt; showAll = true; render(); setActive(seg, btn); });
+      if (opt === filter) btn.classList.add('active');
+      seg.appendChild(btn);
+    });
+    function setActive(root, el){ [...root.children].forEach(b=>b.classList.remove('active')); el.classList.add('active'); }
+
+    const q = document.getElementById('q');
+    q.addEventListener('input', (e)=>{ query = e.target.value.toLowerCase(); render(); });
+
+    const tgl = document.getElementById('toggleMore');
+    tgl.addEventListener('click', ()=>{ showAll = !showAll; render(); });
+
+    const gallery = document.getElementById('gallery');
+    function passFilter(p){
+      const okTool = filter === 'All' || p.tool === filter;
+      const okQ = !query || [p.title, p.industry, p.tool, p.problem, p.objective, p.solution, ...(p.tags||[])].join(' ').toLowerCase().includes(query);
+      return okTool && okQ;
+    }
+    function filtered(){ const res = PROJECTS.filter(passFilter); return res.length ? res : PROJECTS; }
+    function items(){ const f = filtered(); if (showAll) return f; const feat = f.filter(p=>p.featured); return feat.length ? feat : f.slice(0,4); }
+
+    function imgWithFallback(src, fallback){
+      const img = document.createElement('img');
+      img.src = src; img.alt = '';
+      if (fallback) img.onerror = () => { img.onerror = null; img.src = fallback; };
+      img.loading = 'lazy'; img.decoding = 'async';
+      img.style.width = '100%'; img.style.height = '100%'; img.style.objectFit = 'cover';
+      return img;
+    }
+
+    function render(){
+      const list = items();
+      gallery.innerHTML = '';
+      list.forEach(p => {
+        const card = document.createElement('button');
+        card.className = 'card'; card.style.padding = '0'; card.style.textAlign='left'; card.style.overflow='hidden';
+        card.setAttribute('aria-label', `View details ${p.title}`);
+        card.addEventListener('click', ()=> openModal(p));
+
+        const mediaWrap = document.createElement('div');
+        mediaWrap.className = 'project-thumb'; mediaWrap.style.margin = '0';
+        mediaWrap.appendChild(imgWithFallback(p.thumb, p.thumbFallback));
+
+        const body = document.createElement('div'); body.style.padding = '14px 16px 16px';
+        const row = document.createElement('div'); row.style.display='flex'; row.style.justifyContent='space-between'; row.style.alignItems='center'; row.style.gap='10px';
+        const title = document.createElement('div'); title.style.fontWeight='700'; title.style.overflow='hidden'; title.style.textOverflow='ellipsis'; title.style.whiteSpace='nowrap'; title.textContent = p.title;
+        const badge = document.createElement('span'); badge.className='chip'; badge.textContent = p.tool; badge.style.background = 'rgba(255,255,255,0.06)';
+        row.appendChild(title); row.appendChild(badge);
+
+        const sub = document.createElement('div'); sub.style.color='var(--muted)'; sub.style.fontSize='12px'; sub.style.marginTop='4px'; sub.style.overflow='hidden'; sub.style.textOverflow='ellipsis'; sub.style.whiteSpace='nowrap'; sub.textContent = p.industry || '';
+        const tags = document.createElement('div'); tags.style.marginTop='8px'; tags.style.display='flex'; tags.style.flexWrap='wrap'; tags.style.gap='6px'; (p.tags||[]).forEach(t => { const tg = document.createElement('span'); tg.className='chip'; tg.textContent = t; tags.appendChild(tg); });
+        const link = document.createElement('div'); link.style.marginTop='10px'; link.style.display='flex'; link.style.alignItems='center'; link.style.color='var(--brand)'; link.style.fontSize='14px'; link.textContent='View details →';
+
+        body.appendChild(row); body.appendChild(sub); body.appendChild(tags); body.appendChild(link);
+        card.appendChild(mediaWrap); card.appendChild(body);
+        gallery.appendChild(card);
+      });
+      tgl.textContent = showAll ? 'Show Less' : 'Show All Projects';
+    }
+
+    const modal = document.getElementById('modal');
+    const shade = document.getElementById('modalShade');
+    const mClose = document.getElementById('mClose');
+    const mTitle = document.getElementById('mTitle');
+    const mIndustry = document.getElementById('mIndustry');
+    const mMedia = document.getElementById('mMedia');
+    const mFull = document.getElementById('mFull');
+    const mProblem = document.getElementById('mProblem');
+    const mObjective = document.getElementById('mObjective');
+    const mSolution = document.getElementById('mSolution');
+    const mResultsWrap = document.getElementById('mResultsWrap');
+    const mResults = document.getElementById('mResults');
+    let scrollY = 0;
+
+    function openModal(p){
+      mTitle.textContent = p.title; mIndustry.textContent = p.industry || '';
+      const mediaSrc = p.media || p.thumb || p.thumbFallback;
+      mMedia.src = mediaSrc; mMedia.onerror = () => { mMedia.onerror = null; mMedia.src = p.thumbFallback || p.thumb; };
+      mFull.href = mediaSrc; mFull.style.display = mediaSrc ? 'inline-flex' : 'none';
+      mProblem.textContent = p.problem || '-';
+      mObjective.textContent = p.objective || '-';
+      mSolution.textContent = p.solution || '-';
+      mResults.innerHTML = '';
+      if (Array.isArray(p.results) && p.results.length){ mResultsWrap.style.display='block'; p.results.forEach(r=>{ const li=document.createElement('li'); li.textContent=r; mResults.appendChild(li); }); } else { mResultsWrap.style.display='none'; }
+
+      modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+      scrollY = window.scrollY || window.pageYOffset;  
+      document.body.style.position='fixed'; document.body.style.top= `-${scrollY}px`; document.body.style.left='0'; document.body.style.right='0'; document.body.style.width='100%';
+      window.addEventListener('keydown', onEsc);
+    }
+    function closeModal(){
+      modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+      document.body.style.position=''; document.body.style.top=''; document.body.style.left=''; document.body.style.right=''; document.body.style.width='';
+      window.scrollTo(0, scrollY);
+      window.removeEventListener('keydown', onEsc);
+    }
+    function onEsc(e){ if(e.key==='Escape') closeModal(); }
+    shade.addEventListener('click', closeModal); mClose.addEventListener('click', closeModal);
+
+    render();
+  </script>
+</body>
+</html>
+>>>>>>> d5dcbcf (Publish portfolio (initial without heavy GIFs))
