@@ -128,13 +128,28 @@
       :root { --header-h: 60px; }
       header{ background: linear-gradient(to bottom, rgba(11,18,32,0.98), rgba(11,18,32,0.85)); }
       .menu { display:none; }
-      .hero { grid-template-columns: 1fr; gap: 16px; }
-      .hero-card{ padding:16px; }
+      .hero { grid-template-columns: 1fr; gap: 14px; }
+      .hero-card{ padding:14px; }
+
+      /* ✅ Tambahan utama */
+      .hero-card .project-thumb {
+        height: clamp(180px, 52vw, 240px) !important;
+        border-radius: 14px;
+      }
+      .hero-card .project-thumb img {
+        object-fit: cover;
+        object-position: center 18%;
+      }
+
+      /* ✅ Tambahan: supaya jarak antar section lebih rapi */
+      section { padding: 40px 0; }
+
       .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; }
       .controls{ gap:10px; }
       .controls-right{ width:100%; display:flex; justify-content:flex-start; }
       .modal .panel .body{ grid-template-columns: 1fr; }
     }
+
 
     :focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 6px; }
   </style>
@@ -160,7 +175,7 @@
   <main id="top" class="container">
     <section class="hero" aria-label="Intro">
       <div>
-        <span class="pill">Hi there ✌️ · Available for work</span>
+        <span class="pill">Hi there ✌️ · Welcome!</span>
         <h1>I'm <span style="background: linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent;">Allesandro Yudo Asmara</span> - Data Analyst & Excel Expert.</h1>
         <p class="lead">I blend <strong>business</strong> × <strong>technology</strong> to ship dashboards, automations, and data analysis that accelerate decisions. Tools: Excel, Sheets, SQL, Python, Tableau, Power BI, Looker. Detail‑oriented, outcome‑driven, and fast to deliver.</p>
         <div class="badges" aria-label="Highlights">
