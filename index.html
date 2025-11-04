@@ -1,348 +1,17 @@
-<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 <head>
-  <!--
-    Author: YOUR NAME — replace across this file
-    One-file, responsive, accessible portfolio for GitHub Pages.
-    How to use:
-    1) Replace all TODO: content below with your info.
-    2) Commit as index.html to a public repo.
-    3) Turn on GitHub Pages (Settings ▸ Pages ▸ Deploy from a branch).
-  -->
+  <!-- Allesandro Yudo Asmara - Portfolio (Static HTML, v4: restored copy + filter order + external links) -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YOUR NAME — Portfolio</title>
-  <meta name="description" content="YOUR NAME — Data Analyst & Excel Expert. Portfolio, projects, skills, contact." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Allesandro Yudo Asmara - Portfolio</title>
+  <meta name="description" content="Allesandro Yudo Asmara - Data Analyst & Excel Expert. Portfolio, projects, experience, and contact." />
   <meta name="theme-color" content="#0f172a" />
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="YOUR NAME — Portfolio" />
-  <meta property="og:description" content="Portfolio of YOUR NAME: projects, experience, contact." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR-USERNAME.github.io/" />
-  <meta property="og:image" content="https://YOUR-USERNAME.github.io/og-cover.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="YOUR NAME — Portfolio" />
-  <meta name="twitter:description" content="Portfolio of YOUR NAME: projects, experience, contact." />
-  <meta name="twitter:image" content="https://YOUR-USERNAME.github.io/og-cover.png" />
-  <link rel="icon" href="favicon.ico" />
-  <style>
-    :root {
-      --bg: #0b1220;          /* slate-950 */
-      --panel: #0f172a;       /* slate-900 */
-      --muted: #94a3b8;       /* slate-400 */
-      --text: #e2e8f0;        /* slate-200 */
-      --brand: #38bdf8;       /* sky-400 */
-      --brand-2: #22d3ee;     /* cyan-400 */
-      --ring: rgba(56, 189, 248, 0.35);
-      --card: #111827;        /* gray-900 */
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text);
-      background: radial-gradient(1200px 800px at 20% -10%, rgba(34,211,238,0.08), transparent 60%),
-                  radial-gradient(900px 600px at 90% 10%, rgba(56,189,248,0.10), transparent 60%),
-                  var(--bg);
-      line-height: 1.6;
-      letter-spacing: 0.2px;
-    }
-    a { color: var(--brand); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { width: min(1100px, 92%); margin: 0 auto; }
-
-    /* Header */
-    header {
-      position: sticky; top: 0; z-index: 50;
-      backdrop-filter: blur(8px);
-      background: linear-gradient(to bottom, rgba(11,18,32,0.85), rgba(11,18,32,0.45));
-      border-bottom: 1px solid rgba(148,163,184,0.15);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
-    .brand-badge { width: 28px; height: 28px; border-radius: 9px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 3px rgba(56,189,248,0.25); }
-    .menu { display: flex; gap: 22px; }
-    .menu a { color: var(--text); opacity: 0.85; }
-    .menu a:hover { opacity: 1; }
-    .cta { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(90deg,var(--brand),var(--brand-2)); color: #001018; font-weight: 700; border-radius: 12px; padding: 10px 14px; box-shadow: 0 6px 24px rgba(34,211,238,0.25); }
-    .cta:hover { filter: brightness(1.1); text-decoration: none; }
-
-    /* Sections */
-    section { padding: 64px 0; scroll-margin-top: 90px; }
-    h1, h2, h3 { line-height: 1.25; margin: 0 0 14px; }
-    h1 { font-size: clamp(28px, 4vw, 44px); }
-    h2 { font-size: clamp(22px, 3vw, 30px); margin-bottom: 18px; }
-    p.lead { font-size: clamp(16px, 2.1vw, 18px); color: var(--muted); }
-
-    .hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
-    .hero-card { background: linear-gradient(180deg, rgba(15,23,42,0.6), rgba(15,23,42,0.3)); border: 1px solid rgba(148,163,184,0.18); border-radius: 18px; padding: 28px; box-shadow: 0 12px 40px rgba(2,6,23,0.5); }
-    .pill { display: inline-flex; gap: 8px; align-items: center; background: rgba(148,163,184,0.1); padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.2); font-size: 12px; letter-spacing: 0.3px; }
-    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-
-    .grid { display: grid; gap: 16px; }
-    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
-
-    .card { background: linear-gradient(180deg, rgba(17,24,39,0.9), rgba(17,24,39,0.75)); border: 1px solid rgba(148,163,184,0.14); border-radius: 16px; padding: 18px; transition: transform .15s ease, border-color .15s ease; }
-    .card:hover { transform: translateY(-3px); border-color: rgba(34,211,238,0.35); }
-    .card h3 { font-size: 18px; margin: 0 0 6px; }
-    .card p { margin: 0; color: var(--muted); font-size: 14px; }
-
-    .project-thumb { aspect-ratio: 16/9; width: 100%; border-radius: 12px; background: #0b1220; border: 1px solid rgba(148,163,184,0.15); display: grid; place-items: center; font-size: 12px; color: var(--muted); margin-bottom: 10px; overflow: hidden; }
-    .project-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
-    .chip { font-size: 12px; padding: 6px 10px; border: 1px solid rgba(148,163,184,0.25); border-radius: 999px; color: var(--muted); }
-
-    .list { display: grid; gap: 10px; }
-    .list li { background: linear-gradient(180deg, rgba(17,24,39,0.6), rgba(17,24,39,0.4)); border: 1px solid rgba(148,163,184,0.12); padding: 12px 14px; border-radius: 12px; }
-
-    .contact { background: linear-gradient(180deg, rgba(34,211,238,0.06), transparent 40%); border: 1px dashed rgba(56,189,248,0.35); border-radius: 16px; padding: 20px; }
-
-    footer { padding: 34px 0; color: var(--muted); font-size: 14px; border-top: 1px solid rgba(148,163,184,0.14); margin-top: 20px; }
-
-    /* Responsive */
-    @media (max-width: 880px) {
-      .hero { grid-template-columns: 1fr; }
-      .grid.cols-3 { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 600px) {
-      .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; }
-      .menu { display: none; }
-    }
-
-    /* Accessibility focus ring */
-    :focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 6px; }
-  </style>
-  <script>
-    // Smooth scroll for internal anchors
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-          const id = a.getAttribute('href');
-          if (id.length > 1) {
-            e.preventDefault();
-            document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      });
-    });
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "YOUR NAME",
-    "url": "https://YOUR-USERNAME.github.io/",
-    "sameAs": [
-      "https://www.linkedin.com/in/YOUR-LINKEDIN/",
-      "https://github.com/YOUR-USERNAME"
-    ],
-    "jobTitle": "Data Analyst",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Kerja.id"
-    }
-  }
-  </script>
-</head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="brand-badge" aria-hidden="true"></div>
-        <a href="#top" style="font-size: 14px; letter-spacing: 0.5px;">YOUR NAME</a>
-      </div>
-      <nav class="menu" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="cta" href="YOUR-CV.pdf" target="_blank" rel="noopener">Download CV</a>
-    </div>
-  </header>
-
-  <main id="top" class="container">
-    <!-- Hero -->
-    <section class="hero" aria-label="Intro">
-      <div>
-        <span class="pill">Hi there ✌️ · Available for work</span>
-        <h1>I'm <span style="background: linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent;">YOUR NAME</span> — Data Analyst & Excel Expert.</h1>
-        <p class="lead">I help teams turn messy data into clear decisions using <strong>Excel</strong>, <strong>Power Query</strong>, <strong>SQL</strong>, <strong>Python</strong>, and <strong>Power BI</strong>. I love building automations that save hours and dashboards that drive action.</p>
-        <div class="badges" aria-label="Highlights">
-          <span class="chip">Microsoft Excel Expert</span>
-          <span class="chip">2,000+ Students</span>
-          <span class="chip">Kerja.id</span>
-        </div>
-        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="cta" href="#projects">See Projects</a>
-          <a class="pill" href="mailto:hello@example.com">Email me → hello@example.com</a>
-        </div>
-      </div>
-      <div class="hero-card" role="img" aria-label="Profile image placeholder">
-        <!-- Replace with your photo -->
-        <div class="project-thumb" style="height: 260px; font-size:14px;">PLACE YOUR PHOTO HERE</div>
-        <ul class="list" style="margin-top:10px;">
-          <li>🏆 Microsoft Office Specialist: Excel Expert (2019)</li>
-          <li>🎥 Content Creator: 26k TikTok · 35k Instagram</li>
-          <li>📊 Instructor @ Kerja.id — Excel, Sheets, Looker, Tableau, Power BI</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About</h2>
-      <p class="lead">I’m a data professional with experience across HR, F&B, and EdTech. My focus: <em>automation</em> (fewer manual steps), <em>reliability</em> (clean pipelines), and <em>clarity</em> (dashboards that people actually use).</p>
-      <div class="grid cols-3" style="margin-top:16px;">
-        <div class="card">
-          <h3>What I do</h3>
-          <p>ETL with Power Query/Python, data modeling (star schema), KPI dashboards, Excel/Sheets automation, training & documentation.</p>
-        </div>
-        <div class="card">
-          <h3>How I work</h3>
-          <p>Start with the decision, work backward to metrics. Ship MVP fast, iterate with feedback, measure value saved/created.</p>
-        </div>
-        <div class="card">
-          <h3>Impact</h3>
-          <p>Saved 10+ hrs/week via Excel automations; taught 2k+ learners; built reporting that raised campaign ROAS by 18%.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" aria-labelledby="skills-title">
-      <h2 id="skills-title">Skills</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Data & BI</h3>
-          <p>Excel, Power Query, Power Pivot, Power BI, Google Sheets, Looker Studio, Tableau</p>
-        </div>
-        <div class="card">
-          <h3>Programming</h3>
-          <p>Python (pandas, requests), SQL (BigQuery), Apps Script, VBA</p>
-        </div>
-        <div class="card">
-          <h3>Workflow</h3>
-          <p>ETL, star schema, RLS, API ingestion, automation, version control (Git), documentation</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-      <div class="grid cols-3">
-        <!-- Project 1 -->
-        <article class="card">
-          <div class="project-thumb">Dashboard — Sales Performance (Power BI)</div>
-          <h3>Retail Sales Performance</h3>
-          <p>End‑to‑end pipeline from Sheets → BigQuery → Power BI with RLS. 15 KPIs, drill‑through, and export automation.</p>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener" class="pill">Demo</a>
-            <a href="#" target="_blank" rel="noopener" class="pill">GitHub</a>
-            <span class="chip">Power BI</span>
-            <span class="chip">BigQuery</span>
-            <span class="chip">SQL</span>
-          </div>
-        </article>
-        <!-- Project 2 -->
-        <article class="card">
-          <div class="project-thumb">Excel Automation (VBA / PQ)</div>
-          <h3>Excel Order Reconciliation</h3>
-          <p>Power Query + VBA to merge multi‑CSV, de‑dup orders, and email exceptions; saved 6 hrs/week.</p>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener" class="pill">Case Study</a>
-            <span class="chip">Excel</span>
-            <span class="chip">Power Query</span>
-            <span class="chip">VBA</span>
-          </div>
-        </article>
-        <!-- Project 3 -->
-        <article class="card">
-          <div class="project-thumb">Streamlit Geo App</div>
-          <h3>Store Locator Indonesia</h3>
-          <p>Interactive map with radius search and competitor overlay; CSV → pandas → Folium/Streamlit.</p>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener" class="pill">Live</a>
-            <a href="#" target="_blank" rel="noopener" class="pill">Source</a>
-            <span class="chip">Python</span>
-            <span class="chip">Streamlit</span>
-            <span class="chip">Geo</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" aria-labelledby="exp-title">
-      <h2 id="exp-title">Experience</h2>
-      <ul class="list" aria-label="Timeline">
-        <li>
-          <strong>Founder & Instructor — Kerja.id</strong> · 2023—Present
-          <div style="color: var(--muted);">Designed courses (Excel, Sheets, Looker, Tableau, Power BI) and trained 2k+ learners.
-          Built data automations and marketing analytics.</div>
-        </li>
-        <li>
-          <strong>Market Analyst — F&B</strong> · 2024—2025
-          <div style="color: var(--muted);">Built sales dashboards, pricing analysis, and promo ROI studies.</div>
-        </li>
-        <li>
-          <strong>Data QA Engineer — Freelancer</strong> · 2022—2023
-          <div style="color: var(--muted);">Validated pipelines, wrote SQL tests, improved data quality SLAs.</div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <div class="contact">
-        <p class="lead" style="margin:0 0 10px;">Have a project, role, or collab in mind? Let’s talk.</p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="cta" href="mailto:hello@example.com">Email</a>
-          <a class="pill" href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="pill" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub</a>
-          <a class="pill" href="https://instagram.com/YOUR-INSTAGRAM" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
-        <span>© <span id="y"></span> YOUR NAME</span>
-        <span>Made with ♥ — <a href="#top">back to top</a></span>
-      </div>
-    </div>
-  </footer>
-
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</body>
-</html>
-=======
-<!doctype html>
-<html lang="en">
-<head>
-  <!-- Allesandro Yudo Asmara — Portfolio (Static HTML) -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Allesandro Yudo Asmara — Portfolio</title>
-  <meta name="description" content="Allesandro Yudo Asmara — Data Analyst & Excel Expert. Portfolio, projects, experience, and contact." />
-  <meta name="theme-color" content="#0f172a" />
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Allesandro Yudo Asmara — Portfolio" />
+  <meta property="og:title" content="Allesandro Yudo Asmara - Portfolio" />
   <meta property="og:description" content="Data analytics, dashboards, automation. Excel · Sheets · SQL · Python · Power BI · Tableau · Looker." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR-USERNAME.github.io/" />
+  <meta property="og:url" content="https://allesandroya.github.io/" />
   <meta property="og:image" content="images/og-cover.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Allesandro Yudo Asmara — Portfolio" />
-  <meta name="twitter:description" content="Data analytics, dashboards, automation. Excel · Sheets · SQL · Python · Power BI · Tableau · Looker." />
-  <meta name="twitter:image" content="images/og-cover.png" />
   <link rel="icon" href="favicon.ico" />
   <style>
     :root {
@@ -354,10 +23,10 @@
       --brand-2: #22d3ee;     /* cyan-400 */
       --ring: rgba(56, 189, 248, 0.35);
       --card: #111827;        /* gray-900 */
-      /* Subtle dark-tinted variants (for Problem/Objective/Solution) */
       --rose: 244,63,94;      /* rose-500 */
       --indigo: 99,102,241;   /* indigo-500 */
       --emerald: 16,185,129;  /* emerald-500 */
+      --header-h: 64px;
     }
     * { box-sizing: border-box; }
     html, body { height: 100%; }
@@ -370,29 +39,31 @@
                   var(--bg);
       line-height: 1.6;
       letter-spacing: 0.2px;
+      padding-top: calc(env(safe-area-inset-top) + 0px);
     }
     a { color: var(--brand); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .container { width: min(1100px, 92%); margin: 0 auto; }
 
-    header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); background: linear-gradient(to bottom, rgba(11,18,32,0.85), rgba(11,18,32,0.45)); border-bottom: 1px solid rgba(148,163,184,0.15); }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px); background: linear-gradient(to bottom, rgba(11,18,32,0.95), rgba(11,18,32,0.70)); border-bottom: 1px solid rgba(148,163,184,0.15); height: var(--header-h); display: flex; align-items: center; }
+    .nav { display: flex; align-items: center; justify-content: space-between; width: 100%; }
     .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
     .brand-badge { width: 28px; height: 28px; border-radius: 9px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 3px rgba(56,189,248,0.25); }
     .menu { display: flex; gap: 22px; }
-    .menu a { color: var(--text); opacity: 0.85; }
+    .menu a { color: var(--text); opacity: 0.9; }
     .menu a:hover { opacity: 1; }
     .cta { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(90deg,var(--brand),var(--brand-2)); color: #001018; font-weight: 700; border-radius: 12px; padding: 10px 14px; box-shadow: 0 6px 24px rgba(34,211,238,0.25); }
     .cta:hover { filter: brightness(1.1); text-decoration: none; }
 
-    section { padding: 64px 0; scroll-margin-top: 90px; }
+    main { padding-top: 14px; }
+    section { padding: 56px 0; scroll-margin-top: calc(var(--header-h) + 12px); }
     h1, h2, h3 { line-height: 1.25; margin: 0 0 14px; }
-    h1 { font-size: clamp(28px, 4vw, 44px); }
-    h2 { font-size: clamp(22px, 3vw, 30px); margin-bottom: 18px; }
+    h1 { font-size: clamp(28px, 4.8vw, 44px); }
+    h2 { font-size: clamp(22px, 3.6vw, 30px); margin-bottom: 18px; }
     p.lead { font-size: clamp(16px, 2.1vw, 18px); color: var(--muted); }
 
-    .hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
-    .hero-card { background: linear-gradient(180deg, rgba(15,23,42,0.6), rgba(15,23,42,0.3)); border: 1px solid rgba(148,163,184,0.18); border-radius: 18px; padding: 28px; box-shadow: 0 12px 40px rgba(2,6,23,0.5); }
+    .hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 24px; align-items: center; }
+    .hero-card { background: linear-gradient(180deg, rgba(15,23,42,0.6), rgba(15,23,42,0.3)); border: 1px solid rgba(148,163,184,0.18); border-radius: 18px; padding: 22px; box-shadow: 0 12px 40px rgba(2,6,23,0.5); }
     .pill { display: inline-flex; gap: 8px; align-items: center; background: rgba(148,163,184,0.1); padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.2); font-size: 12px; letter-spacing: 0.3px; }
     .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 
@@ -406,7 +77,6 @@
     .card p { margin: 0; color: var(--muted); font-size: 14px; }
 
     .project-thumb { aspect-ratio: 16/9; width: 100%; border-radius: 12px; background: #0b1220; border: 1px solid rgba(148,163,184,0.15); display: grid; place-items: center; font-size: 12px; color: var(--muted); margin-bottom: 10px; overflow: hidden; }
-    .project-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
     .chip { font-size: 12px; padding: 6px 10px; border: 1px solid rgba(148,163,184,0.25); border-radius: 999px; color: var(--muted); }
 
     .list { display: grid; gap: 10px; }
@@ -416,13 +86,14 @@
 
     footer { padding: 34px 0; color: var(--muted); font-size: 14px; border-top: 1px solid rgba(148,163,184,0.14); margin-top: 20px; }
 
-    /* Gallery controls */
-    .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-    .segment { display: inline-flex; overflow: hidden; border-radius: 12px; border: 1px solid rgba(148,163,184,0.25); background: rgba(15,23,42,0.4); }
+    /* Controls: search on left, group chips on right */
+    .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+    .controls-right { margin-left: auto; }
+    .segment { display: inline-flex; overflow: hidden; border-radius: 12px; border: 1px solid rgba(148,163,184,0.25); background: rgba(15,23,42,0.45); }
     .segment button{ padding: 8px 12px; color: var(--text); background: transparent; border: 0; cursor: pointer; }
     .segment button.active{ background: linear-gradient(90deg,var(--brand),var(--brand-2)); color: #001018; font-weight: 700; }
-    .search{ position: relative; }
-    .search input{ background: rgba(15,23,42,0.6); border: 1px solid rgba(148,163,184,0.25); color: var(--text); padding: 10px 12px 10px 36px; border-radius: 12px; min-width: 240px; }
+    .search{ position: relative; flex:1; min-width: 220px; }
+    .search input{ width:100%; background: rgba(15,23,42,0.6); border: 1px solid rgba(148,163,184,0.25); color: var(--text); padding: 10px 12px 10px 36px; border-radius: 12px; }
     .search .icon{ position: absolute; left: 10px; top: 50%; transform: translateY(-50%); opacity: .6; }
 
     /* Modal */
@@ -430,63 +101,43 @@
     .modal.open{ display: grid; }
     .modal .shade{ position: absolute; inset: 0; background: rgba(0,0,0,.6); }
     .modal .panel{ position: relative; z-index: 1; width: min(1000px, 96vw); background: #0d1526; border: 1px solid rgba(148,163,184,0.25); border-radius: 16px; box-shadow: 0 30px 100px rgba(0,0,0,.4); }
-    .modal .panel header{ display:flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid rgba(148,163,184,0.18); background: rgba(13,21,38,0.85); backdrop-filter: blur(8px); position: sticky; top:0; border-radius: 16px 16px 0 0; }
+    .modal .panel header{ display:flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid rgba(148,163,184,0.18); background: rgba(13,21,38,0.9); backdrop-filter: blur(8px); position: sticky; top:0; border-radius: 16px 16px 0 0; }
     .btns{ display:flex; gap:8px; }
     .btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:12px; border:1px solid rgba(148,163,184,.25); background: rgba(17,24,39,.5); color:var(--text); cursor:pointer; text-decoration:none; }
     .btn.primary{ background: linear-gradient(90deg,var(--brand),var(--brand-2)); color:#001018; border-color: transparent; font-weight:700; }
     .modal .panel h3{ margin: 0; font-size: 18px; }
     .modal .panel .body{ padding: 18px; display: grid; gap: 18px; grid-template-columns: 1.25fr .9fr; }
     .modal .panel .media{ border: 1px solid rgba(148,163,184,0.18); border-radius: 12px; overflow: hidden; background: #000; display: grid; place-items: center; }
-    .modal .panel .media img{ width: 100%; height: 100%; object-fit: contain; max-height: 70vh; background: #000; }
+    .modal .panel .media img, .modal .panel .media video{ width: 100%; height: 100%; object-fit: contain; max-height: 70vh; background: #000; }
     .modal .panel .stack{ display: grid; gap: 12px; }
 
-    /* Dark-friendly variant cards (Problem / Objective / Solution) */
+    /* Detail cards */
     .detail{ border-radius: 12px; border:1px solid rgba(148,163,184,.18); padding: 12px; background: rgba(17,24,39,.65); }
     .detail .head{ display:flex; align-items:center; gap:8px; font-weight:700; }
     .detail .txt{ margin-top:6px; font-size:14px; color:var(--text); line-height:1.65; }
-
     .detail.problem{ background: linear-gradient(180deg, rgba(var(--rose),.16), rgba(var(--rose),.06)); border-color: rgba(var(--rose),.28); }
     .detail.problem .head{ color: rgba(var(--rose),.9); }
-
     .detail.objective{ background: linear-gradient(180deg, rgba(var(--indigo),.16), rgba(var(--indigo),.06)); border-color: rgba(var(--indigo),.28); }
     .detail.objective .head{ color: rgba(var(--indigo),.92); }
-
     .detail.solution{ background: linear-gradient(180deg, rgba(var(--emerald),.16), rgba(var(--emerald),.06)); border-color: rgba(var(--emerald),.28); }
     .detail.solution .head{ color: rgba(var(--emerald),.92); }
 
-    @media (max-width: 880px) { .hero { grid-template-columns: 1fr; } .grid.cols-3 { grid-template-columns: 1fr 1fr; } .modal .panel .body{ grid-template-columns: 1fr; } }
-    @media (max-width: 600px) { .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; } .menu { display: none; } .search input{ min-width: 0; width: 100%; } }
+    /* Mobile polish */
+    @media (max-width: 960px) { .grid.cols-3 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 720px) {
+      :root { --header-h: 60px; }
+      header{ background: linear-gradient(to bottom, rgba(11,18,32,0.98), rgba(11,18,32,0.85)); }
+      .menu { display:none; }
+      .hero { grid-template-columns: 1fr; gap: 16px; }
+      .hero-card{ padding:16px; }
+      .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; }
+      .controls{ gap:10px; }
+      .controls-right{ width:100%; display:flex; justify-content:flex-start; }
+      .modal .panel .body{ grid-template-columns: 1fr; }
+    }
 
     :focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 6px; }
   </style>
-  <script>
-    // Smooth scroll for internal anchors
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-          const id = a.getAttribute('href');
-          if (id.length > 1) {
-            e.preventDefault();
-            document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      });
-    });
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Allesandro Yudo Asmara",
-    "url": "https://YOUR-USERNAME.github.io/",
-    "sameAs": [
-      "https://www.linkedin.com/in/allesandro-yudo-8a80bb163/",
-      "https://github.com/allesandroya"
-    ],
-    "jobTitle": "Data Analyst",
-    "worksFor": { "@type": "Organization", "name": "Kerja.id" }
-  }
-  </script>
 </head>
 <body>
   <header>
@@ -502,17 +153,16 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="cta" href="assets/CV%20Allesandro%20ATS.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="cta" href="https://drive.google.com/file/d/1IU2CaSsCLzo36zMspDPNGX4oc29BE4Pq/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
     </div>
   </header>
 
   <main id="top" class="container">
-    <!-- Hero -->
     <section class="hero" aria-label="Intro">
       <div>
         <span class="pill">Hi there ✌️ · Available for work</span>
-        <h1>I'm <span style="background: linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent;">Allesandro Yudo Asmara</span> — Data Analyst & Excel Expert.</h1>
-        <p class="lead">I blend <strong>business</strong> × <strong>technology</strong> to ship dashboards, automations, and training that accelerate decisions. Tools: Excel, Sheets, SQL, Python, Tableau, Power BI, Looker. Detail‑oriented, outcome‑driven, and fast to deliver.</p>
+        <h1>I'm <span style="background: linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent;">Allesandro Yudo Asmara</span> - Data Analyst & Excel Expert.</h1>
+        <p class="lead">I blend <strong>business</strong> × <strong>technology</strong> to ship dashboards, automations, and data analysis that accelerate decisions. Tools: Excel, Sheets, SQL, Python, Tableau, Power BI, Looker. Detail‑oriented, outcome‑driven, and fast to deliver.</p>
         <div class="badges" aria-label="Highlights">
           <span class="chip">Microsoft Excel Expert (MOS)</span>
           <span class="chip">3,000+ Learners</span>
@@ -528,25 +178,23 @@
           <img src="images/photo.jpg" alt="Profile photo" style="width:100%; height:100%; object-fit:cover;" />
         </div>
         <ul class="list" style="margin-top:10px;">
-          <li>🏆 <strong>Microsoft Office Specialist — Excel Expert (Certified)</strong></li>
-          <li>🎥 <strong>Content Creator</strong> — 48k social followers</li>
-          <li>🎯 <strong>Educator</strong> — helped 3,000+ learners upgrade their data skills at Kerja.id</li>
+          <li>🏆 <strong>Microsoft Office Specialist - Excel Expert (Certified)</strong></li>
+          <li>🎥 <strong>Content Creator</strong> - 48k social followers</li>
+          <li>🎯 <strong>Educator</strong> - helped 3,000+ learners upgrade their data skills at Kerja.id</li>
         </ul>
       </div>
     </section>
 
-    <!-- About -->
     <section id="about" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
-      <p class="lead">Hello, I'm Sandro. Passionate about the synergy of business and technology. I build <em>clean pipelines</em>, <em>useful dashboards</em>, and <em>lightweight automations</em> for real‑world teams — from F&B and retail to insurance and education. I’m a detail‑oriented problem solver committed to delivering high‑quality results promptly.</p>
+      <p class="lead">Hello, I'm Sandro. Passionate about the synergy of business and technology. I build <em>clean pipelines</em>, <em>useful dashboards</em>, and <em>lightweight automations</em> for real‑world teams - from F&B and retail to insurance and education. I’m a detail‑oriented problem solver committed to delivering high‑quality results promptly.</p>
       <div class="grid cols-3" style="margin-top:16px;">
         <div class="card"><h3>What I do</h3><p>ETL with Power Query/Python, data modeling (star schema), KPI dashboards, Excel/Sheets automation, training & documentation.</p></div>
         <div class="card"><h3>How I work</h3><p>Start with decisions → metrics → minimal MVP. Iterate fast with feedback; measure time saved & business impact.</p></div>
-        <div class="card"><h3>Impact</h3><p>Cut manual prep by 80% via automation; accelerated reporting; taught hundreds with 5/5 average rating.</p></div>
+        <div class="card"><h3>Impact</h3><p>Cut manual prep by 80% via automation; accelerated reporting; taught hundreds with 4.9/5 average rating.</p></div>
       </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills" aria-labelledby="skills-title">
       <h2 id="skills-title">Skills</h2>
       <div class="grid cols-3">
@@ -556,22 +204,23 @@
       </div>
     </section>
 
-    <!-- Projects / Gallery -->
     <section id="projects" aria-labelledby="projects-title">
       <h2 id="projects-title">Projects</h2>
-      <p class="lead">Click a card to view details. Each project includes <strong>⚠️ Problem</strong>, <strong>🎯 Objective</strong>, and <strong>🛠️ Solution</strong> with subtle dark‑tinted color accents.</p>
+      <p class="lead">Click a card to view details. Each project includes <strong>⚠️ Problem</strong>, <strong>🎯 Objective</strong>, and <strong>🛠️ Solution</strong>. Use the group filter to browse Dashboards, Programming, or Data Analysis.</p>
 
-      <div class="controls" style="margin: 16px 0; justify-content: space-between; gap:12px;">
-        <div class="segment" id="seg-tools" role="tablist" aria-label="Filter by tool"></div>
-        <label class="search" style="flex:1; max-width: 420px;">
+      <div class="controls" style="margin: 16px 0;">
+        <label class="search" for="q">
           <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           <input id="q" type="search" placeholder="Search: retail, geo map, KPI…" />
         </label>
+        <div class="controls-right">
+          <div class="segment" id="seg-groups" role="tablist" aria-label="Filter by group"></div>
+        </div>
       </div>
 
       <div id="gallery" class="grid cols-3" aria-live="polite" style="gap:18px;"></div>
       <div style="display:flex; justify-content:center; margin-top:18px;">
-        <button id="toggleMore" class="cta" style="padding:10px 14px;">Show All Projects</button>
+        <button id="toggleMore" class="cta" style="padding:10px 14px;">Show All</button>
       </div>
 
       <!-- Modal -->
@@ -591,18 +240,9 @@
           <div class="body">
             <div class="media"><img id="mMedia" alt="preview" /></div>
             <div class="stack">
-              <div class="detail problem">
-                <div class="head">⚠️ Problem</div>
-                <div id="mProblem" class="txt"></div>
-              </div>
-              <div class="detail objective">
-                <div class="head">🎯 Objective</div>
-                <div id="mObjective" class="txt"></div>
-              </div>
-              <div class="detail solution">
-                <div class="head">🛠️ Solution</div>
-                <div id="mSolution" class="txt"></div>
-              </div>
+              <div class="detail problem"><div class="head">⚠️ Problem</div><div id="mProblem" class="txt"></div></div>
+              <div class="detail objective"><div class="head">🎯 Objective</div><div id="mObjective" class="txt"></div></div>
+              <div class="detail solution"><div class="head">🛠️ Solution</div><div id="mSolution" class="txt"></div></div>
               <div class="detail" id="mResultsWrap" style="display:none;">
                 <div class="head">✅ Results & Impact</div>
                 <ul id="mResults" class="txt" style="margin:6px 0 0 18px; list-style:disc;"></ul>
@@ -613,23 +253,37 @@
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Services & Class -->
+    <section id="services-links" aria-labelledby="services-links-title">
+      <h2 id="services-links-title">On-Going Projects</h2>
+      <p class="lead">Here are my two business projects developed by me (and team)</p>
+      <div class="grid cols-2" style="margin-top:16px;">
+        <a class="card" href="https://kerja.id/belajar-excel-dari-nol/" target="_blank" rel="noopener">
+          <h3>Learn Excel/Sheets & BI Tools - Kerja.id</h3>
+          <p>Structured curriculum with exercises & lifetime access. Beginner‑friendly.</p>
+        </a>
+        <a class="card" href="https://allesandroya.github.io/jasa-bikin-dashboard/" target="_blank" rel="noopener">
+          <h3>Custom Dashboard Service</h3>
+          <p>Excel / Google Sheets / Looker Studio / Power BI / Tableau. From data to decisions.</p>
+        </a>
+      </div>
+    </section>
+
     <section id="experience" aria-labelledby="exp-title">
       <h2 id="exp-title">Experience</h2>
       <ul class="list" aria-label="Timeline">
-        <li><strong>Developer & Instructor — Kerja.id</strong> · Jan 2024—Present<div style="color: var(--muted);">Built LMS, authored Excel-for-DA curriculum (eBooks + exercises), mentored hundreds (avg 5/5 rating).</div></li>
-        <li><strong>Market Data Analyst Manager — PT. Pesta Porta Abadi</strong> · Oct 2024—Mar 2025<div style="color: var(--muted);">Built BigQuery pipelines (Sheets/POS/API), Looker dashboards, and a Python geo-mapping app; improved tracking & decisions.</div></li>
-        <li><strong>Data QA Engineer (IFRS17) — FWD Insurance</strong> · May 2023—Oct 2024<div style="color: var(--muted);">Automation with Excel VBA/Python; rigorous data quality validation; ETL mapping & UAT support.</div></li>
-        <li><strong>Data Analytics Student Development Coordinator — RevoU</strong> · Nov 2023—May 2024<div style="color: var(--muted);">Ensured learning experience & curriculum alignment; reporting & QC for student activities.</div></li>
-        <li><strong>Data & Excel Content Creator & Freelancer — Self‑Employed</strong> · Jan 2023—Present<div style="color: var(--muted);">Content & services for Excel/Data; clients incl. BCA Insurance, PLN Icon Plus, Monde, Adaro Services, SJEC, BPR Arto Moro, etc.</div></li>
-        <li><strong>Data Analyst — PT. Medikal Putri Sharavasti</strong> · Aug 2022—Jan 2023<div style="color: var(--muted);">Data cleaning/analysis, ad‑hoc reports & visualizations to answer business questions.</div></li>
-        <li><strong>Data Analyst Associate (Virtual Internship) — RevoU × Astro</strong> · Sep 2022—Nov 2022<div style="color: var(--muted);">Led projects; dashboards by level; ML clustering for marketing; forecasting & simulation.</div></li>
-        <li><strong>Small Business Owner — Bubobi</strong> · Mar 2020—Apr 2021<div style="color: var(--muted);">Built & ran a boba brand; learned digital marketing, ops, selling, resource mgmt.</div></li>
-        <li><strong>Supervisor HRD — Ramayana</strong> · Mar 2019—Jun 2020<div style="color: var(--muted);">Leadership & coordination foundations supporting later analytics roles.</div></li>
+        <li><strong>Developer & Instructor - Kerja.id</strong> · Aug 2024-Present<div style="color: var(--muted);">Built LMS, authored Excel-for-DA curriculum (eBooks + exercises), mentored hundreds (avg 4.9/5 rating).</div></li>
+        <li><strong>Market Data Analyst Manager - PT. Pesta Porta Abadi</strong> · Oct 2024-Mar 2025<div style="color: var(--muted);">Built BigQuery pipelines (Sheets/POS/API), Looker dashboards, and a Python geo-mapping app; improved tracking & decisions.</div></li>
+        <li><strong>Data QA Engineer (IFRS17) - FWD Insurance</strong> · May 2023-Oct 2024<div style="color: var(--muted);">Automation with Excel VBA/Python; rigorous data quality validation; ETL mapping & UAT support.</div></li>
+        <li><strong>Data Analytics Student Development Coordinator - RevoU</strong> · Nov 2023-May 2024<div style="color: var(--muted);">Ensured learning experience & curriculum alignment; reporting & QC for student activities.</div></li>
+        <li><strong>Data & Excel Content Creator & Freelancer - Self‑Employed</strong> · Jan 2023-Present<div style="color: var(--muted);">Content & services for Excel/Data; clients incl. BCA Insurance, PLN Icon Plus, Monde, Adaro Services, SJEC, BPR Arto Moro, etc.</div></li>
+        <li><strong>Data Analyst - PT. Medikal Putri Sharavasti</strong> · Aug 2022-Jan 2023<div style="color: var(--muted);">Data cleaning/analysis, ad‑hoc reports & visualizations to answer business questions.</div></li>
+        <li><strong>Data Analyst Associate (Virtual Internship) - RevoU × Astro</strong> · Sep 2022-Nov 2022<div style="color: var(--muted);">Led projects; dashboards by level; ML clustering for marketing; forecasting & simulation.</div></li>
+        <li><strong>Small Business Owner - Bubobi</strong> · Mar 2020-Apr 2021<div style="color: var(--muted);">Built & ran a boba brand; learned digital marketing, ops, selling, resource mgmt.</div></li>
+        <li><strong>Supervisor HRD - Ramayana</strong> · Mar 2019-Jun 2020<div style="color: var(--muted);">Leadership & coordination foundations supporting later analytics roles.</div></li>
       </ul>
     </section>
 
-    <!-- Contact -->
     <section id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
       <div class="contact">
@@ -637,8 +291,6 @@
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
           <a class="cta" href="mailto:allesandroya@gmail.com">Email</a>
           <a class="pill" href="https://www.linkedin.com/in/allesandro-yudo-8a80bb163/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="pill" href="https://kerja.id" target="_blank" rel="noopener">Kerja.id</a>
-          <a class="pill" href="https://read.cv/allesandroya" target="_blank" rel="noopener">read.cv</a>
           <a class="pill" href="https://wa.me/6281944900917" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
@@ -649,7 +301,7 @@
     <div class="container">
       <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
         <span>© <span id="y"></span> Allesandro Yudo Asmara</span>
-        <span>Made with ♥ — <a href="#top">back to top</a></span>
+        <span>Thankyou for coming! - <a href="#top">back to top</a></span>
       </div>
     </div>
   </footer>
@@ -657,49 +309,213 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
+    // Helper to quickly define a project with graceful defaults
+    const P = (cfg) => ({
+      problem: cfg.problem || '-',
+      objective: cfg.objective || '-',
+      solution: cfg.solution || '-',
+      results: cfg.results || undefined,
+      ...cfg
+    });
+
     /* =========================
-       PROJECT DATA — English copy; thumbnails PNG/JPG, detail GIF optional
+       PROJECT DATA
+       - Groups: Dashboards, Programming, Data Analysis
+       - Featured: show exactly 3 per group when in "Show Less" mode (for All)
+       - Thumbs use .jpg, modal prefers .gif
        ========================= */
-    const PROJECTS = [
-      { id:"c-ex1", title:"Mess Dashboard", client:"Government / Military", tool:"Excel", industry:"Occupancy / Room Allocation", tags:["Occupancy","Room Allocation","Check-in/out"], thumb:"images/Excel1.png", thumbFallback:"images/Excel1.jpg", media:"images/Excel1.gif", featured:true, problem:"Managers struggled to track vacant/occupied rooms by area & division and maintain check‑in/out history. Data was scattered and updated manually.", objective:"Provide a single dashboard with real‑time occupancy by area/division, a vacancy list, and a date/time‑based history.", solution:"Simple model + Excel (Power Query + Pivot) to consolidate sources and visualize occupancy. Clean UI aligned with the organization’s theme.", results:["Room allocation time dropped from hours to minutes.","Double assignments reduced significantly.","Transparent, auditable allocation across divisions."] },
-      { id:"c-ex2", title:"Doctor App Training Monitor", client:"Hospital", tool:"Excel", industry:"Training / Adoption", tags:["Training","Adoption"], thumb:"images/Excel2.png", thumbFallback:"images/Excel2.jpg", media:"images/Excel2.gif", problem:"Leadership needed to track which doctors/roles had attended training and actively used the app.", objective:"Monitor training progress & adoption rate per doctor/role, including active/inactive status.", solution:"Power Query to clean attendance/usage data; pivot to track status; adoption & certification KPIs.", results:["Training gaps surfaced quickly","Adoption rate improved"] },
-      { id:"c-ex3", title:"Stock & Reorder Tracker", client:"Retail", tool:"Excel", industry:"Warehouse", tags:["Reorder","Cashflow"], thumb:"images/Excel3.png", thumbFallback:"images/Excel3.jpg", media:"images/Excel3.gif", featured:true, problem:"Hard to track in/out stock, reorder time, and cashflow impact.", objective:"Track stock & reorder points plus simple cash‑in/out for control.", solution:"Excel modeling (safety stock, reorder) + compact dashboard with restock alerts.", results:["Fewer stockouts","More precise purchase planning"] },
-      { id:"c-ex4", title:"Target Sales Tracker", tool:"Excel", industry:"Sales", tags:["Target vs Actual","Gantt","Team Coloring"], thumb:"images/Excel4.png", thumbFallback:"images/Excel4.jpg", media:"images/Excel4.gif", problem:"Leaders could not instantly see who hit monthly quotas and overall team progress.", objective:"Show target vs actual per salesperson/month with Gantt‑style views and team color coding.", solution:"Model target/actual by month; pseudo‑Gantt in Excel; dynamic colors per team; KPI cards for achievement & gaps." },
-      { id:"c-ex5", title:"Project & Budget Tracker", tool:"Excel", industry:"PMO / Ops", tags:["Timeline","Priority","Budget"], thumb:"images/Excel5.png", thumbFallback:"images/Excel5.jpg", media:"images/Excel5.gif", problem:"Multiple projects ran in parallel without a tidy summary: dates, %progress, priorities, and budget realization were fragmented.", objective:"Unify core project status and a budget page to view usage vs allocation.", solution:"Project table (start/end/%progress/priority), simple kanban/Gantt, budget breakdown & variance, filters by PIC/team." },
-      { id:"c-ex6", title:"Smartphone Sales Dashboard", client:"Retail Gadget", tool:"Excel", industry:"Sales", tags:["Time series","Dynamic metric"], thumb:"images/Excel6.png", thumbFallback:"images/Excel6.jpg", media:"images/Excel6.gif", problem:"Analysts needed to switch metrics (sales, profit, transactions, qty) on the fly.", objective:"Analyze sales by area/type and time series with switchable metrics.", solution:"Parameters + formulas & Pivot for dynamic metrics; lightweight UI for quick toggles." },
-      { id:"c-ex7", title:"Training Compliance by Directorate", tool:"Excel", industry:"Public Sector / HR", tags:["Compliance","Gap Analysis"], thumb:"images/Excel7.png", thumbFallback:"images/Excel7.jpg", media:"images/Excel7.gif", problem:"HR needed to track which employees had/had not met training requirements by directorate and which modules were missing.", objective:"Provide a clear list of employees not yet compliant plus required modules.", solution:"Match job competency lists with training status; auto gap list per directorate; filters for names/roles; export for HR follow‑up." },
-      { id:"c-ex8", title:"Employee Dashboard (Attrition, HDRF, PISA)", tool:"Excel", industry:"HR", tags:["Headcount","Attrition","Utilization","Compliance"], thumb:"images/Excel8.png", thumbFallback:"images/Excel8.jpg", media:"images/Excel8.gif", problem:"Management required an overview of current headcount, turnover, HDRF utilization, and PISA submission status.", objective:"Provide a holistic view of workforce health and program compliance.", solution:"ETL HR master + participation logs; attrition & utilization KPIs; monthly trends; segmentation by unit/grade; submission indicators." },
-      { id:"c-ex9", title:"Project Monitoring + RAID", tool:"Excel", industry:"PMO / Ops", tags:["Timeline","RAID","Issue Tracking"], thumb:"images/Excel9.png", thumbFallback:"images/Excel9.jpg", media:"images/Excel9.gif", problem:"Teams lacked a central place to track project status and RAID (Risks, Assumptions, Issues, Dependencies).",
-        objective:"Centralize status and RAID lists to accelerate escalation and decisions.", solution:"Status summary & timeline plus RAID with owner/severity/due date and action recommendations; filters by project/PIC." },
-      { id:"c-ex10", title:"Transport Management (VBA)", client:"Logistics", tool:"Excel", industry:"Transport", tags:["Tonnage","VBA"], thumb:"images/Excel10.png", thumbFallback:"images/Excel10.jpg", media:"images/Excel10.gif", problem:"Monthly manual refresh was slow.", objective:"Enable dynamic monthly file selection and refresh for tonnage dashboards by date/company.", solution:"VBA for file pick & refresh; Query + Pivot for visuals." },
-      { id:"c-gs1", title:"Data Cleaning & Analytics Doc", client:"Supermarket", tool:"Google Sheets", industry:"Analytics", tags:["Documentation","Cleaning"], thumb:"images/Googlesheet1.png", thumbFallback:"images/Googlesheet1.jpg", media:"images/Googlesheet1.gif", problem:"Cleaning process documentation and store insights were messy.", objective:"Produce a simple report on sales/customer patterns.", solution:"Doc template + cleaning log in Sheets; concise insights." },
-      { id:"c-look1", title:"FnB Store Performance", client:"F&B", tool:"Looker Studio", industry:"Sales / Finance", tags:["CAPEX","OPEX","Geo"], thumb:"images/Looker1.png", thumbFallback:"images/Looker1.jpg", media:"images/Looker1.gif", featured:true, problem:"Owner wanted to monitor targets and expenses by city/province without paid BI licenses.", objective:"Shareable marketing/finance dashboard quickly.", solution:"Looker Studio (free) + GA4/Ads + spreadsheets; geo visuals & KPIs." },
-      { id:"c-look2", title:"KOL Endorsement Tracker", client:"Agency", tool:"Looker Studio", industry:"Marketing", tags:["Pipeline","Impact"], thumb:"images/Looker2.png", thumbFallback:"images/Looker2.jpg", media:"images/Looker2.gif", problem:"Hard to monitor which KOLs were not yet dealt/in progress/completed and the impact.", objective:"End‑to‑end KOL pipeline tracking with Google‑style theme.", solution:"Looker + Sheet (form) for status & impact scoring." },
-      { id:"c-pbi1", title:"Store Sales + Discount Simulator", client:"Retail", tool:"Power BI", industry:"Sales", tags:["Geo map","Discount"], thumb:"images/Powerbi1.png", thumbFallback:"images/Powerbi1.jpg", media:"images/Powerbi1.gif", problem:"Need to simulate discounts by product and visualize sales by province.", objective:"Quick analysis of sales & discount impact.", solution:"Star schema + DAX discount parameter; map visual.", results:["Discount experiments became measurable","Clear view of area performance"] },
-      { id:"c-tab1", title:"RFM Analysis", client:"E‑commerce", tool:"Tableau", industry:"CRM", tags:["Segmentation","RFM"], thumb:"images/Tableau1.png", thumbFallback:"images/Tableau1.jpg", media:"images/Tableau1.gif", featured:true, problem:"Marketing needed customer segments with explainable reasons.", objective:"Dashboard showing segment proportions & scoring rationale.", solution:"Tableau best‑practice viz with concise tooltips.", results:["Faster audience selection","Early campaign uplift observed"] },
-      { id:"c-tab2", title:"RFM Analysis — Customer Detail", tool:"Tableau", industry:"E‑Commerce / Retail", tags:["RFM Detail","Customer 360"], thumb:"images/Tableau2.png", thumbFallback:"images/Tableau2.jpg", media:"images/Tableau2.gif", problem:"After the overview, the team needed to inspect each customer's recency/frequency/monetary and segment.", objective:"Provide detailed customer view with scores & history.", solution:"Customer table with R/F/M, segment filters, drill links to transactions; export for CRM campaigns." },
-      { id:"c-tab3", title:"Fleet Administration Monitor", tool:"Tableau", industry:"Marine", tags:["Compliance","Budget Usage"], thumb:"images/Tableau3.png", thumbFallback:"images/Tableau3.jpg", media:"images/Tableau3.gif", problem:"Need to check each vessel's administrative completeness and budgets used.", objective:"Provide compliance status per vessel and related costs summary.", solution:"Document checklist, green/red indicators, cost recap by vessel/period; filters by fleet & route." },
-      { id:"c-tab4", title:"Fleet Status & Value", tool:"Tableau", industry:"Marine", tags:["Asset Value","Destination","Vendor"], thumb:"images/Tableau4.png", thumbFallback:"images/Tableau4.jpg", media:"images/Tableau4.gif", problem:"Management wanted to see vessel values, destinations, providers, and monthly dynamics.", objective:"Comprehensive view of asset values and movements by vendor/destination.", solution:"Vessel asset model, monthly value/budget trends, vendor/destination breakdowns, deviation indicators." },
-      { id:"c-tab5", title:"Smartphone Sales (Branches)", client:"Retail Gadget", tool:"Tableau", industry:"Sales", tags:["Branch","Type","Spend"], thumb:"images/Tableau5.png", thumbFallback:"images/Tableau5.jpg", media:"images/Tableau5.gif", problem:"Need a concise summary of sales & spend across branches/brands/types.", objective:"KPI dashboard with quick drilldowns.", solution:"Star schema + interactive visuals." },
-      { id:"c-tab6", title:"Financial Development Dashboard", tool:"Tableau", industry:"Finance", tags:["Dept","Cost Center","Revenue","Expenses"], thumb:"images/Tableau6.png", thumbFallback:"images/Tableau6.jpg", media:"images/Tableau6.gif", problem:"Leadership needed to monitor economic value per department/cost centre, revenue & expenses, and sales trends.", objective:"Comprehensive finance dashboard to track performance & cost efficiency.", solution:"P&L by dept/cost centre, revenue/expense trends, variance vs target, drill to large transactions." },
-      { id:"c-tab7", title:"KPI Sales Dashboard", tool:"Tableau", industry:"Sales", tags:["Target vs Actual","Province","Agent"], thumb:"images/Tableau7.png", thumbFallback:"images/Tableau7.jpg", media:"images/Tableau7.gif", problem:"Need to monitor target vs actual, revenue by province, and agent achievement.", objective:"Highlight achievements and gaps immediately.", solution:"KPI cards, provincial map, agent leaderboard, time/product filters; gap highlighting for coaching." },
-      { id:"c-tab8", title:"BPJS Health — Comprehensive", client:"Healthcare", tool:"Tableau", industry:"Insurance / Health", tags:["Diagnosis","Premium","City"], thumb:"images/Tableau8.png", thumbFallback:"images/Tableau8.jpg", media:"images/Tableau8.gif", problem:"Need a comprehensive view: diseases, insurance levels, premiums, city costs, demographics, etc.", objective:"Full exploration with executive summary.", solution:"Multi‑page Tableau with bookmarks; advanced visuals." }
+
+    // DATA ANALYSIS - Analytics1–6 (EN copy from your brief)
+    const dataAnalysis = [
+      P({ id:'a-1', title:'Pakistan’s Largest E‑commerce - Sales & Loyalty', group:'Data Analysis', tool:'Case Study', industry:'E‑commerce', thumb:'images/Analytics1.jpg', media:'images/Analytics1.gif', featured:true,
+         problem:"Seasonal spikes (e.g., Black Friday) created a flattering top‑line, yet post‑campaign repeat purchase was weak.",
+         objective:"Quantify true demand vs. promotion lift, model next‑year trendlines, and identify levers to increase customer loyalty.",
+         solution:"Trend + seasonality decomposition, cohort/retention analysis, CLV lens on promo cohorts; recommendations on post‑promo re‑engagement (timing, offers, channels)." }),
+      P({ id:'a-2', title:'Supermarket Sales - Segments that Move the Needle', group:'Data Analysis', tool:'Case Study', industry:'Retail', thumb:'images/Analytics2.jpg', media:'images/Analytics2.gif', featured:false,
+         problem:"Campaign performance underwhelmed and didn’t translate to meaningful revenue.",
+         objective:"Reframe targeting by discovering high‑value customer clusters.",
+         solution:"RFM + demographic‑driven clustering; surfaced that households with >1 child have the highest revenue potential and deserve tailored bundles and placements." }),
+      P({ id:'a-3', title:'Euro Bikes Company - Margin & AOV Decline', group:'Data Analysis', tool:'Case Study', industry:'Retail', thumb:'images/Analytics3.jpg', media:'images/Analytics3.gif', featured:true,
+         problem:"Average order value kept sliding month over month while some SKUs dragged negative margin.",
+         objective:"Isolate the drivers of AOV decline and clean up the product mix by profitability.",
+         solution:"SKU margin deep‑dive by category/store, elasticity hints, store‑country variance; flagged loss‑makers and recommended bundle/price corrections." }),
+      P({ id:'a-4', title:'Streamer Income - What Predicts Revenue?', group:'Data Analysis', tool:'Case Study', industry:'Creators', thumb:'images/Analytics4.jpg', media:'images/Analytics4.gif', featured:false,
+         problem:"Agency wanted a data‑backed view of what makes a streamer successful.",
+         objective:"Find the most predictive features for revenue to improve talent development and scouting.",
+         solution:"ML feature importance; revealed self‑esteem and character‑facet signals correlate with tipping volume; action plan for coaching and roster decisions." }),
+      P({ id:'a-5', title:'Vending Machines - Location × Uptime × Mix', group:'Data Analysis', tool:'Case Study', industry:'Operations', thumb:'images/Analytics5.jpg', media:'images/Analytics5.gif', featured:true,
+         problem:"Revenue varied widely by machine and location; some 24/7 units increased cost without payoff.",
+         objective:"Optimize product completeness and uptime schedule per location.",
+         solution:"Behavioral analysis + location schedule mapping; found incomplete assortments cap revenue; proposed SKU completion and dynamic uptime for cost control." }),
+      P({ id:'a-6', title:'Student Performance - What Lifts Scores?', group:'Data Analysis', tool:'Case Study', industry:'Education', thumb:'images/Analytics6.jpg', media:'images/Analytics6.gif', featured:false,
+         problem:"School wanted practical levers to improve exam outcomes across subjects.",
+         objective:"Identify variables most associated with high scores, then turn them into interventions.",
+         solution:"Feature analysis on study time, nutrition, and math proficiency; found math strength and pre‑exam meals correlate with higher cross‑subject scores." })
     ];
 
-    const TOOL_OPTIONS = ["All","Excel","Google Sheets","Looker Studio","Power BI","Tableau"];  
+    // PROGRAMMING - Programing1–7 (skip #3 per brief)
+    const programming = [
+      P({ id:'p-1', title:'ETL with Power Query & M', group:'Programming', tool:'Automation', industry:'Data Engineering', thumb:'images/Programing1.jpg', media:'images/Programing1.gif', featured:false,
+         problem:"Manual monthly updates were slow and error‑prone.",
+         objective:"Make refreshes one‑click while guaranteeing consistent cleaning rules.",
+         solution:"Power Query pipelines with parameterized folders; drag‑and‑drop files → automatic cleansing and append." }),
+      P({ id:'p-2', title:'Excel VBA - Financial Model Auto‑Builder', group:'Programming', tool:'Automation', industry:'Finance', thumb:'images/Programing2.jpg', media:'images/Programing2.gif', featured:true,
+         problem:"Analysts rebuilt models by hand whenever inputs changed.",
+         objective:"Generate a full financial model automatically after data updates.",
+         solution:"VBA modules to assemble sheets, recalc scenarios, and output summaries; swap inputs → model refreshes in seconds." }),
+      // skip Programing3
+      P({ id:'p-4', title:'Data Quality Checker (Insurance‑grade)', group:'Programming', tool:'App', industry:'Data Quality', thumb:'images/Programing4.jpg', media:'images/Programing4.gif', featured:true,
+         problem:"Thousand‑file validations were done manually with ad‑hoc Excel formulas.",
+         objective:"Automate large‑scale checks and surface anomalies clearly.",
+         solution:"Desktop app to batch‑scan folders, apply rule packs, and export anomaly reports for follow‑up with severity levels." }),
+      P({ id:'p-5', title:'Data Manager App - Zip · Rename · Move', group:'Programming', tool:'App', industry:'Ops', thumb:'images/Programing5.jpg', media:'images/Programing5.gif', featured:false,
+         problem:"Repetitive file operations ate time and invited mistakes.",
+         objective:"Standardize and automate routine file housekeeping.",
+         solution:"UI tool to zip, rename with patterns, and move files by templates; one‑click presets for frequent workflows." }),
+      P({ id:'p-6', title:'CSV Combiner - SQL‑like, No Code', group:'Programming', tool:'App', industry:'Analytics', thumb:'images/Programing6.jpg', media:'images/Programing6.gif', featured:true,
+         problem:"Non‑coders struggled to summarize and join multiple CSVs.",
+         objective:"Offer SQL‑style grouping/joins through a friendly interface.",
+         solution:"Drag files → pick columns → aggregate/join; exports tidy datasets for BI without writing queries." }),
+      P({ id:'p-7', title:'Store Location Map - Radius & Distance', group:'Programming', tool:'App', industry:'Geo', thumb:'images/Programing7.jpg', media:'images/Programing7.gif', featured:false,
+         problem:"Users needed an easy way to visualize store radii, distances, and performance by city/province.",
+         objective:"Turn a spreadsheet of stores into an interactive geo map.",
+         solution:"App reads location sheet, draws radii per store, computes nearest‑neighbour distances, and overlays average sales by marker color." })
+    ];
 
-    let filter = 'All';
+    // DASHBOARDS - restored Problem/Objective/Solution (Indonesian copy)
+    const dashboards = [
+      P({ id:'ex-1', title:'Mess Dashboard', tool:'Excel', group:'Dashboards', industry:'Occupancy / Room Allocation', thumb:'images/Excel1.jpg', media:'images/Excel1.gif', featured:true,
+          problem:'Pengelola mess kesulitan memantau kamar kosong/terisi per area & divisi termasuk riwayat tanggal/jam check-in–out. Data tersebar & update manual.',
+          objective:'Satu dashboard yang menampilkan okupansi real-time per area & divisi, daftar kamar kosong, dan histori pengisian berbasis tanggal/waktu.',
+          solution:'Model data sederhana + Excel (Pivot/Power Query) untuk konsolidasi & visual okupansi. UI dibuat clean sesuai tema institusi.',
+          results:['Waktu mencari kamar kosong turun drastis (menit).','Akurasi naik; double-assign kamar berkurang signifikan.','Proses alokasi antar divisi jadi transparan & audit-able.'] }),
+      P({ id:'ex-2', title:'Pelatihan Aplikasi Dokter', tool:'Excel', group:'Dashboards', industry:'Training / Adoption', thumb:'images/Excel2.jpg', media:'images/Excel2.gif',
+          problem:'Manajemen butuh memantau dokter & jabatan yang sudah pelatihan dan aktif menggunakan aplikasi maupun yang belum.',
+          objective:'Monitoring progres pelatihan & adoption rate per dokter/jabatan, lengkap dengan status aktif/tidak aktif.',
+          solution:'Power Query untuk cleaning data kehadiran/penggunaan, pivot tracking status, KPI adoption & sertifikasi.',
+          results:['Celah pelatihan cepat teridentifikasi','Adoption rate meningkat'] }),
+      P({ id:'ex-3', title:'Stock Inventory Tracker', tool:'Excel', group:'Dashboards', industry:'Warehouse', thumb:'images/Excel3.jpg', media:'images/Excel3.gif', featured:true,
+          problem:'Sulit memantau stok masuk/keluar, kapan harus restock, & arus kas terkait pembelian/penjualan.',
+          objective:'Tracking stok & reorder point, serta arus uang masuk/keluar sederhana untuk kontrol.',
+          solution:'Excel modeling (safety stock, reorder) + dashboard ringkas untuk alert restock.',
+          results:['Stockout menurun','Perencanaan pembelian lebih presisi'] }),
+      P({ id:'ex-4', title:'Target Sales Tracker', tool:'Excel', group:'Dashboards', industry:'Sales', thumb:'images/Excel4.jpg', media:'images/Excel4.gif',
+          problem:'Sulit melihat mana salesperson yang sudah mencapai target tiap bulan dan progress keseluruhan per tim. Visual timeline tidak ada, sehingga koordinasi proyek penjualan kurang jelas.',
+          objective:'Menampilkan pencapaian target per sales & per bulan dengan visual Gantt dan pewarnaan berbeda per tim agar status cepat terbaca.',
+          solution:'Model target/actual per bulan, Gantt pseudo-chart di Excel, pewarnaan dinamis per tim, serta kartu KPI ringkas (achievement, gap).',
+          results:['Daily stand-up lebih cepat karena visualisasi jelas.','Manager mudah mengidentifikasi sales yang butuh bantuan.','Rate pencapaian target tim meningkat.'] }),
+      P({ id:'ex-5', title:'Project & Budget Tracker', tool:'Excel', group:'Dashboards', industry:'PMO / Ops', thumb:'images/Excel5.jpg', media:'images/Excel5.gif',
+          problem:'Proyek berjalan paralel tanpa ringkasan yang rapi: tanggal mulai/selesai, persentase progress, prioritas, dan realisasi anggaran sulit dipantau dalam satu tempat.',
+          objective:'Menyatukan informasi inti proyek dan halaman khusus budget untuk melihat pemakaian vs alokasi.',
+          solution:'Tabel proyek (start, end, %progress, priority), kanban/gantt sederhana, halaman budget dengan breakdown kategori & variance, serta filter per PIC/tim.',
+          results:['Stakeholder punya single source of truth proyek.','Deteksi potensi over-budget lebih dini.','Rapat koordinasi mingguan lebih ringkas & fokus.'] }),
+      P({ id:'ex-6', title:'Smartphone Sales Dashboard', tool:'Excel', group:'Dashboards', industry:'Sales', thumb:'images/Excel6.jpg', media:'images/Excel6.gif',
+          problem:'User ingin mengganti metrik (sales, profit, transaksi, qty) secara dinamis.',
+          objective:'Analisis penjualan per area, tipe, & time series; metrik switchable.',
+          solution:'Parameter + formula & Pivot untuk metrik dinamis; UI ringan.',
+          results:['Analisis fleksibel & cepat'] }),
+      P({ id:'ex-7', title:'Monitoring Kepatuhan Diklat per Direktorat', tool:'Excel', group:'Dashboards', industry:'Public Sector / HR', thumb:'images/Excel7.jpg', media:'images/Excel7.gif',
+          problem:'Perlu memantau karyawan yang sudah/ belum memenuhi diklat per direktorat, dan modul apa saja yang masih kurang.',
+          objective:'Menyediakan tampilan ringkas daftar karyawan belum memenuhi diklat per direktorat beserta modul yang harus diambil.',
+          solution:'Match daftar kompetensi per jabatan dengan status diklat; gap-list otomatis per direktorat; filter nama/jabatan; export untuk tindak lanjut HR.',
+          results:['Kesenjangan kompetensi terlihat jelas per direktorat.','Tindak lanjut training lebih terarah & terukur.'] }),
+      P({ id:'ex-8', title:'Employee Dashboard (Attrition, HDRF Utilization, PISA)', tool:'Excel', group:'Dashboards', industry:'HR', thumb:'images/Excel8.jpg', media:'images/Excel8.gif',
+          problem:'Manajemen memerlukan pandangan menyeluruh atas headcount saat ini, turnover/attrition, HDRF utilization, dan status PISA submission.',
+          objective:'Memberi gambaran kondisi tenaga kerja terkini dan indikator kepatuhan/ pemanfaatan program.',
+          solution:'ETL data HR master + log kepesertaan; KPI attrition & utilization; tren bulanan; segmentasi per unit/grade; indikator submission PISA.',
+          results:['Visibilitas HR meningkat; diskusi manajemen lebih berbasis data.','Area dengan risiko attrition tinggi cepat terdeteksi.'] }),
+      P({ id:'ex-9', title:'Project Monitoring + RAID', tool:'Excel', group:'Dashboards', industry:'PMO / Ops', thumb:'images/Excel9.jpg', media:'images/Excel9.gif',
+          problem:'Mirip Project & Budget Tracker namun fokus pada kontrol proyek berjalan dan halaman RAID (Risks, Assumptions, Issues, Dependencies) untuk mitigasi.',
+          objective:'Memusatkan status proyek dan daftar risiko/isu/dependensi untuk mempercepat eskalasi dan keputusan.',
+          solution:'Ringkasan status & timeline, halaman RAID dengan owner, severity, due date, dan rekomendasi aksi; filter per project/PIC.',
+          results:['Mitigasi risiko lebih cepat; blocking issues turun.','Transparansi status proyek meningkat lintas tim.'] }),
+      P({ id:'ex-10', title:'Transport Management (VBA)', tool:'Excel', group:'Dashboards', industry:'Transport', thumb:'images/Excel10.jpg', media:'images/Excel10.gif',
+          problem:'Update data bulanan manual lambat; butuh pilih file dan refresh otomatis.',
+          objective:'Dashboard tonase per tanggal/perusahaan yang bisa update file bulanan secara dinamis.',
+          solution:'VBA untuk pemilihan file & refresh; Query & pivot untuk visual.',
+          results:['Update cepat, human error menurun'] }),
+
+      P({ id:'gs-1', title:'Data Cleaning & Analytics Doc', tool:'Google Sheets', group:'Dashboards', industry:'Analytics', thumb:'images/Googlesheet1.jpg', media:'images/Googlesheet1.gif',
+          problem:'Dokumentasi proses cleaning & insight toko belum rapi.',
+          objective:'Dok report untuk pola penjualan & customer.',
+          solution:'Template doc + sheet cleaning log; insight ringkas.',
+          results:['Proses data reproducible'] }),
+
+      P({ id:'lk-1', title:'FnB Store Performance', tool:'Looker Studio', group:'Dashboards', industry:'Sales / Finance', thumb:'images/Looker1.jpg', media:'images/Looker1.gif', featured:true,
+          problem:'Owner ingin pantau target penjualan & pengeluaran per kota/provinsi tanpa biaya lisensi BI.',
+          objective:'Dashboard marketing/finance cepat, mudah dishare.',
+          solution:'Looker Studio (gratis) + GA4/Ads + spreadsheet; visual geo & KPI.',
+          results:['Akses mudah lintas cabang','Share link praktis'] }),
+      P({ id:'lk-2', title:'KOL Endorsement Tracker', tool:'Looker Studio', group:'Dashboards', industry:'Marketing', thumb:'images/Looker2.jpg', media:'images/Looker2.gif',
+          problem:'Sulit memantau KOL mana yang belum deal/proses/selesai & dampaknya.',
+          objective:'Pipeline KOL end-to-end dgn tema warna Google.',
+          solution:'Looker + Sheet (form) untuk status & skor impact.',
+          results:['Transparansi proses meningkat'] }),
+
+      P({ id:'pbi-1', title:'Store Sales + Discount Simulator', tool:'Power BI', group:'Dashboards', industry:'Sales', thumb:'images/Powerbi1.jpg', media:'images/Powerbi1.gif', featured:true,
+          problem:'Perlu simulasi diskon per produk & visual geo penjualan per provinsi.',
+          objective:'Analisis sales & dampak diskon cepat.',
+          solution:'Model star + DAX untuk parameter diskon, Map visual.',
+          results:['Eksperimen harga lebih percaya diri'] }),
+
+      P({ id:'tb-1', title:'RFM Analysis', tool:'Tableau', group:'Dashboards', industry:'CRM', thumb:'images/Tableau1.jpg', media:'images/Tableau1.gif', featured:true,
+          problem:'Butuh segmentasi customer dg alasan & ringkasan yang jelas.',
+          objective:'RFM dashboard menampilkan proporsi segmen & alasan scoring.',
+          solution:'Tableau viz best-practice & tooltip ringkas.',
+          results:['Retensi & targeting naik'] }),
+      P({ id:'tb-2', title:'RFM Analysis - Customer Detail', tool:'Tableau', group:'Dashboards', industry:'E-Commerce / Retail', thumb:'images/Tableau2.jpg', media:'images/Tableau2.gif',
+          problem:'Setelah overview, tim butuh melihat nilai recency/frequency/monetary per customer dan segmen masing-masing.',
+          objective:'Memberikan tampilan detail per customer lengkap dengan skor & riwayat transaksi.',
+          solution:'Tabel detail customer dengan R/F/M, filter segmen, link drill ke histori transaksi; export untuk CRM campaign.',
+          results:['Tim CRM bisa mengeksekusi kampanye yang sangat terarah.','Analisis churn & upsell jadi actionable.'] }),
+      P({ id:'tb-3', title:'Monitoring Administrasi Kapal', tool:'Tableau', group:'Dashboards', industry:'Marine', thumb:'images/Tableau3.jpg', media:'images/Tableau3.gif',
+          problem:'Perlu memeriksa kelengkapan administrasi tiap kapal serta anggaran yang sudah terpakai.',
+          objective:'Menyediakan status kepatuhan administrasi per kapal dan ringkasan biaya terkait.',
+          solution:'Checklist dokumen per kapal, indikator hijau/merah, rekap biaya per kapal/per periode; filter armada & rute.',
+          results:['Temuan dokumen kurang lengkap turun signifikan.','Kontrol biaya per kapal lebih ketat & terdokumentasi.'] }),
+      P({ id:'tb-4', title:'Monitoring Status Kapal', tool:'Tableau', group:'Dashboards', industry:'Marine', thumb:'images/Tableau4.jpg', media:'images/Tableau4.gif',
+          problem:'Manajemen ingin melihat nilai kapal per unit, tujuan, penyedia, serta dinamika anggaran & nilai per bulan.',
+          objective:'Memberikan pandangan menyeluruh nilai aset & pergerakannya per vendor/tujuan.',
+          solution:'Model aset kapal, ringkasan nilai/budget bulanan, breakdown per vendor & tujuan, tren nilai, dan indikator penyimpangan.',
+          results:['Pengambilan keputusan investasi/maintenance lebih berbasis data.','Variasi nilai per vendor/tujuan lebih mudah dianalisis.'] }),
+      P({ id:'tb-5', title:'Smartphone Sales (Branches)', tool:'Tableau', group:'Dashboards', industry:'Sales', thumb:'images/Tableau5.jpg', media:'images/Tableau5.gif',
+          problem:'Butuh ringkasan penjualan & pengeluaran antar cabang/merk/type.',
+          objective:'KPI sales/spend & drilldown cepat.',
+          solution:'Model star + viz interaktif.',
+          results:['Kontrol biaya & penjualan lebih presisi'] }),
+      P({ id:'tb-6', title:'Financial Development Dashboard', tool:'Tableau', group:'Dashboards', industry:'Finance', thumb:'images/Tableau6.jpg', media:'images/Tableau6.gif',
+          problem:'Manajemen butuh memantau nilai ekonomi per department, cost centre, revenue & expenses, termasuk tren penjualan.',
+          objective:'Satu dashboard keuangan komprehensif untuk pemantauan performa & efisiensi biaya.',
+          solution:'Ringkasan P&L per dept/cost centre, tren revenue & expense, variance vs target, dan drill ke transaksi besar.',
+          results:['Identifikasi penghematan biaya lebih cepat.','Kinerja departemen bisa dibandingkan secara objektif.'] }),
+      P({ id:'tb-7', title:'KPI Sales Dashboard', tool:'Tableau', group:'Dashboards', industry:'Sales', thumb:'images/Tableau7.jpg', media:'images/Tableau7.gif',
+          problem:'Perlu memantau target vs actual, revenue per provinsi, dan achievement per agen sales.',
+          objective:'Memberikan dasbor KPI penjualan yang langsung menyorot pencapaian & deviasi.',
+          solution:'Kartu KPI, peta provinsi, leaderboard agen, serta filter waktu/produk; highlight gap untuk coaching cepat.',
+          results:['Fokus pembinaan agen menjadi jelas & berdampak.','Pertumbuhan penjualan lebih konsisten lintas provinsi.'] }),
+      P({ id:'tb-8', title:'BPJS Health - Comprehensive', tool:'Tableau', group:'Dashboards', industry:'Insurance / Health', thumb:'images/Tableau8.jpg', media:'images/Tableau8.gif',
+          problem:'Perlu pandangan komprehensif: penyakit, level asuransi, premi, biaya per kota, demografi dsb.',
+          objective:'Eksplorasi lengkap dengan ringkasan eksekutif.',
+          solution:'Tableau multi-page + bookmark; viz advanced.',
+          results:['Insight eksekutif cepat, detail tersedia'] })
+    ];
+
+    const PROJECTS = [...dashboards, ...programming, ...dataAnalysis];
+
+    // Group filter chips: order = All | Dashboards | Programming | Data Analysis
+    const GROUP_OPTIONS = ["All","Dashboards","Programming","Data Analysis"];
+
+    let filterGroup = 'All'; // default tab
     let query = '';
-    let showAll = false;
+    let showAll = false; // default: Show Less on All
 
-    const seg = document.getElementById('seg-tools');
-    TOOL_OPTIONS.forEach(opt => {
-      const btn = document.createElement('button');
-      btn.textContent = opt; btn.setAttribute('role','tab');
-      btn.addEventListener('click', () => { filter = opt; showAll = true; render(); setActive(seg, btn); });
-      if (opt === filter) btn.classList.add('active');
-      seg.appendChild(btn);
+    const segGroups = document.getElementById('seg-groups');
+    GROUP_OPTIONS.forEach(opt => {
+      const b=document.createElement('button'); b.textContent=opt; b.setAttribute('role','tab');
+      b.addEventListener('click',()=>{ filterGroup=opt; showAll = (opt !== 'All'); render(); setActive(segGroups,b); });
+      if(opt===filterGroup) b.classList.add('active'); segGroups.appendChild(b);
     });
+
     function setActive(root, el){ [...root.children].forEach(b=>b.classList.remove('active')); el.classList.add('active'); }
 
     const q = document.getElementById('q');
@@ -709,18 +525,30 @@
     tgl.addEventListener('click', ()=>{ showAll = !showAll; render(); });
 
     const gallery = document.getElementById('gallery');
-    function passFilter(p){
-      const okTool = filter === 'All' || p.tool === filter;
-      const okQ = !query || [p.title, p.industry, p.tool, p.problem, p.objective, p.solution, ...(p.tags||[])].join(' ').toLowerCase().includes(query);
-      return okTool && okQ;
-    }
-    function filtered(){ const res = PROJECTS.filter(passFilter); return res.length ? res : PROJECTS; }
-    function items(){ const f = filtered(); if (showAll) return f; const feat = f.filter(p=>p.featured); return feat.length ? feat : f.slice(0,4); }
 
-    function imgWithFallback(src, fallback){
+    function passGroup(p){ return filterGroup==='All' || p.group===filterGroup; }
+    function passQuery(p){ return !query || [p.title, p.industry, p.group, p.problem, p.objective, p.solution, p.tool, ...(p.tags||[])].join(' ').toLowerCase().includes(query); }
+
+    function filtered(){
+      const res = PROJECTS.filter(p=>passGroup(p) && passQuery(p));
+      return res.length ? res : PROJECTS.filter(passGroup);
+    }
+
+    function items(){
+      const f = filtered();
+      if (showAll) return f;
+      // Show exactly 3 featured when on All; otherwise handled by showAll=true when switching tabs
+      const feat = f.filter(p=>p.featured);
+      const first3 = feat.length>=3 ? feat.slice(0,3) : [...feat, ...f.filter(p=>!p.featured)].slice(0,3);
+      return first3;
+    }
+
+    function imgWithFallback(src){
+      const base = src.replace(/\.gif$/i, '.jpg');
       const img = document.createElement('img');
-      img.src = src; img.alt = '';
-      if (fallback) img.onerror = () => { img.onerror = null; img.src = fallback; };
+      img.src = base; // prefer jpg thumbnail
+      img.alt = '';
+      img.onerror = () => { img.onerror = null; img.src = src.replace(/\.jpg$/i, '.png'); };
       img.loading = 'lazy'; img.decoding = 'async';
       img.style.width = '100%'; img.style.height = '100%'; img.style.objectFit = 'cover';
       return img;
@@ -737,25 +565,26 @@
 
         const mediaWrap = document.createElement('div');
         mediaWrap.className = 'project-thumb'; mediaWrap.style.margin = '0';
-        mediaWrap.appendChild(imgWithFallback(p.thumb, p.thumbFallback));
+        mediaWrap.appendChild(imgWithFallback(p.media || p.thumb));
 
         const body = document.createElement('div'); body.style.padding = '14px 16px 16px';
         const row = document.createElement('div'); row.style.display='flex'; row.style.justifyContent='space-between'; row.style.alignItems='center'; row.style.gap='10px';
         const title = document.createElement('div'); title.style.fontWeight='700'; title.style.overflow='hidden'; title.style.textOverflow='ellipsis'; title.style.whiteSpace='nowrap'; title.textContent = p.title;
-        const badge = document.createElement('span'); badge.className='chip'; badge.textContent = p.tool; badge.style.background = 'rgba(255,255,255,0.06)';
-        row.appendChild(title); row.appendChild(badge);
+        const badgeWrap = document.createElement('div'); badgeWrap.style.display='flex'; badgeWrap.style.gap='6px';
+        if(p.group){ const g=document.createElement('span'); g.className='chip'; g.textContent=p.group; g.style.background='rgba(255,255,255,0.06)'; badgeWrap.appendChild(g); }
+        if(p.tool){ const t=document.createElement('span'); t.className='chip'; t.textContent=p.tool; t.style.background='rgba(255,255,255,0.06)'; badgeWrap.appendChild(t); }
+        row.appendChild(title); row.appendChild(badgeWrap);
 
         const sub = document.createElement('div'); sub.style.color='var(--muted)'; sub.style.fontSize='12px'; sub.style.marginTop='4px'; sub.style.overflow='hidden'; sub.style.textOverflow='ellipsis'; sub.style.whiteSpace='nowrap'; sub.textContent = p.industry || '';
-        const tags = document.createElement('div'); tags.style.marginTop='8px'; tags.style.display='flex'; tags.style.flexWrap='wrap'; tags.style.gap='6px'; (p.tags||[]).forEach(t => { const tg = document.createElement('span'); tg.className='chip'; tg.textContent = t; tags.appendChild(tg); });
-        const link = document.createElement('div'); link.style.marginTop='10px'; link.style.display='flex'; link.style.alignItems='center'; link.style.color='var(--brand)'; link.style.fontSize='14px'; link.textContent='View details →';
 
-        body.appendChild(row); body.appendChild(sub); body.appendChild(tags); body.appendChild(link);
+        body.appendChild(row); body.appendChild(sub);
         card.appendChild(mediaWrap); card.appendChild(body);
         gallery.appendChild(card);
       });
-      tgl.textContent = showAll ? 'Show Less' : 'Show All Projects';
+      tgl.textContent = showAll ? 'Show Less' : 'Show All';
     }
 
+    // Modal logic
     const modal = document.getElementById('modal');
     const shade = document.getElementById('modalShade');
     const mClose = document.getElementById('mClose');
@@ -771,15 +600,20 @@
     let scrollY = 0;
 
     function openModal(p){
-      mTitle.textContent = p.title; mIndustry.textContent = p.industry || '';
-      const mediaSrc = p.media || p.thumb || p.thumbFallback;
-      mMedia.src = mediaSrc; mMedia.onerror = () => { mMedia.onerror = null; mMedia.src = p.thumbFallback || p.thumb; };
+      mTitle.textContent = p.title; mIndustry.textContent = [p.group, p.industry].filter(Boolean).join(' · ');
+      const mediaSrc = p.media || p.thumb;
+      mMedia.src = mediaSrc; mMedia.onerror = () => { mMedia.onerror = null; mMedia.src = (p.thumb || '').replace(/\.gif$/i, '.jpg'); };
       mFull.href = mediaSrc; mFull.style.display = mediaSrc ? 'inline-flex' : 'none';
       mProblem.textContent = p.problem || '-';
       mObjective.textContent = p.objective || '-';
       mSolution.textContent = p.solution || '-';
       mResults.innerHTML = '';
-      if (Array.isArray(p.results) && p.results.length){ mResultsWrap.style.display='block'; p.results.forEach(r=>{ const li=document.createElement('li'); li.textContent=r; mResults.appendChild(li); }); } else { mResultsWrap.style.display='none'; }
+      if (p.results && p.results.length){
+        p.results.forEach(r=>{ const li=document.createElement('li'); li.textContent=r; mResults.appendChild(li); });
+        mResultsWrap.style.display = 'block';
+      } else {
+        mResultsWrap.style.display = 'none';
+      }
 
       modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
       scrollY = window.scrollY || window.pageYOffset;  
@@ -799,4 +633,3 @@
   </script>
 </body>
 </html>
->>>>>>> d5dcbcf (Publish portfolio (initial without heavy GIFs))
